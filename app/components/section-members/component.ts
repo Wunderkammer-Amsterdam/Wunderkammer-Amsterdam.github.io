@@ -42,31 +42,31 @@ export default class SectionMembers extends Component<SectionMembersArgs> {
       id: 'karim',
       title: 'Karim & Laura',
       profileImageSrc: '/assets/images/impressions/a2ede6e0-7063-484d-9189-3dda86fce813.jpg',
-      intro: '...',
+      intro: 'Researchers',
     },
     {
       id: 'michael',
       title: 'Michael',
       profileImageSrc: '/assets/images/impressions/a2ede6e0-7063-484d-9189-3dda86fce813.jpg',
-      intro: '...',
+      intro: 'UX Designer',
     },
     {
       id: 'peter',
       title: 'Peter',
       profileImageSrc: '/assets/images/impressions/a2ede6e0-7063-484d-9189-3dda86fce813.jpg',
-      intro: '...',
+      intro: 'Docent',
     },
     {
       id: 'joanne',
       title: 'Joanne',
       profileImageSrc: '/assets/images/impressions/a2ede6e0-7063-484d-9189-3dda86fce813.jpg',
-      intro: '...',
+      intro: 'Journalist',
     },
     {
       id: 'Suzanne',
       title: 'Suzanne',
       profileImageSrc: '/assets/images/impressions/a2ede6e0-7063-484d-9189-3dda86fce813.jpg',
-      intro: '...',
+      intro: 'Sociaal ondernemer',
     },
   ];
 
