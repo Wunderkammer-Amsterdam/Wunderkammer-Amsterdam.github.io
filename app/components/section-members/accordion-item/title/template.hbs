@@ -1,0 +1,7 @@
+<div class="{{if @collapsed "collapsed" "expanded"}} card-header" role="tab" ...attributes {{on "click" this.handleClick}}>
+    <button class="btn btn-link no-focus p-0 {{if @disabled "disabled"}}" type="button" disabled={{@disabled}}>
+      {{yield}}
+    </button>
+
+    <p class="small">{{@member.intro}}</p>
+</div>

@@ -1,0 +1,5 @@
+<div class="flex-1 items-stretch" style="position:relative">
+  {{#each this.images as |image index|}}
+    <div class="image-container {{if (eq index this.currentIndex) "show"}}" style="background-image: url({{image.src}}"/>
+  {{/each}}
+</div>
