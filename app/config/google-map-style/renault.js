@@ -121,7 +121,7 @@ export default [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#ffc107',
+        color: '#ffe607',
       },
     ],
   },
@@ -139,7 +139,7 @@ export default [
     elementType: 'geometry.fill',
     stylers: [
       {
-        color: '#ffc107',
+        color: '#ffe607',
       },
     ],
   },
@@ -166,7 +166,7 @@ export default [
     elementType: 'all',
     stylers: [
       {
-        color: '#ffc107',
+        color: '#ffe607',
       },
       {
         visibility: 'on',
@@ -181,7 +181,7 @@ export default [
         visibility: 'on',
       },
       {
-        color: '#6c757d',
+        color: '#E6F0F7',
       },
     ],
   },
