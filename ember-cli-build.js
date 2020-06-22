@@ -1,13 +1,19 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const isProductionLikeBuild = ['production', 'testing'].indexOf(EmberApp.env()) > -1;
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     'ember-bootstrap': {
       bootstrapVersion: 4,
-      importBootstrapCSS: false
-    }
+      importBootstrapCSS: false,
+    },
+    fingerprint: {
+      // https://github.com/rickharrison/broccoli-asset-rev
+      enabled: isProductionLikeBuild,
+      exclude: ['favicon-*.png', 'members'],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
