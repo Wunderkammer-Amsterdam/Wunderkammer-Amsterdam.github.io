@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'wunderkammer',
-    environment,
+    podModulePrefix: 'wunderkammer/pods',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -13,8 +13,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
@@ -23,18 +23,20 @@ module.exports = function(environment) {
     },
   };
 
-  ENV.googleMutantLeaflet = {
+  ENV['ember-cli-mirage'] = { enabled: true, autostart: true };
+
+  ENV['googleMutantLeaflet'] = {
     apiKey: 'AIzaSyAdtRO3yA1Yp1LGDa8bA-dkDLNVit1fXvA',
     libraries: [],
-    include: true
+    include: true,
   };
 
-  ENV.contentSecurityPolicy = {
+  ENV['contentSecurityPolicy'] = {
     'default-src': "'none'",
     'script-src': "'self' 'unsafe-eval' *.googleapis.com",
     'font-src': "'self' fonts.gstatic.com",
     'img-src': "'self' data: *.googleapis.com maps.gstatic.com *.gstatic.com",
-    'style-src': "'self' 'unsafe-inline' *.googleapis.com"
+    'style-src': "'self' 'unsafe-inline' *.googleapis.com",
   };
 
   if (environment === 'development') {

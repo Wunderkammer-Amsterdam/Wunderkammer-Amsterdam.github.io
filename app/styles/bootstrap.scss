@@ -5,7 +5,7 @@
 @import "ember-bootstrap/root";
 @import "ember-bootstrap/reboot";
 @import "ember-bootstrap/type";
-//@import "ember-bootstrap/images";
+@import "ember-bootstrap/images";
 //@import "ember-bootstrap/code";
 @import "ember-bootstrap/grid";
 //@import "ember-bootstrap/tables";
@@ -25,7 +25,7 @@
 //@import "ember-bootstrap/jumbotron";
 //@import "ember-bootstrap/alert";
 //@import "ember-bootstrap/progress";
-//@import "ember-bootstrap/media";
+@import "ember-bootstrap/media";
 //@import "ember-bootstrap/list-group";
 //@import "ember-bootstrap/close";
 //@import "ember-bootstrap/toasts";

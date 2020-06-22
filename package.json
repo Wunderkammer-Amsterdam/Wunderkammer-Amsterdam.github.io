@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
-    "@glimmer/component": "^1.0.0",
+    "@glimmer/component": "^2.0.0-beta.7",
     "@glimmer/tracking": "^1.0.0",
     "@types/ember": "^3.16.0",
     "@types/ember-data": "^3.16.0",
@@ -32,6 +32,7 @@
     "babel-eslint": "^10.1.0",
     "bootstrap": "^4.3.1",
     "broccoli-asset-rev": "^3.0.0",
+    "cssesc": "^3.0.0",
     "ember-auto-import": "^1.5.3",
     "ember-bootstrap-changeset-validations": "^3.0.0",
     "ember-changeset": "^3.5.3",
@@ -42,12 +43,16 @@
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-htmlbars": "^4.3.1",
     "ember-cli-inject-live-reload": "^2.0.2",
+    "ember-cli-mirage": "^1.1.7",
     "ember-cli-sass": "^10.0.1",
+    "ember-cli-showdown": "^4.5.0",
     "ember-cli-sri": "^2.1.1",
+    "ember-cli-string-helpers": "^5.0.0",
     "ember-cli-typescript": "^3.1.4",
     "ember-cli-typescript-blueprints": "^3.0.0",
     "ember-cli-uglify": "^3.0.0",
-    "ember-data": "~3.18.0",
+    "ember-data": "~3.16.0",
+    "ember-elsewhere": "^1.2.0",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.1",
     "ember-leaflet": "^4.1.0",
@@ -56,7 +61,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.0",
-    "ember-source": "~3.18.0",
+    "ember-source": "~3.16.0",
     "ember-template-lint": "^2.6.0",
     "ember-truth-helpers": "^2.1.0",
     "eslint": "^6.8.0",
@@ -81,7 +86,8 @@
   },
   "dependencies": {
     "circular": "^1.0.5",
-    "ember-bootstrap": "https://github.com/kaliber5/ember-bootstrap#0add1126edad27e38711564d9c39f6f557690350",
-    "ember-concurrency": "^1.1.7"
+    "ember-bootstrap": "^4.0.0-rc.2",
+    "ember-concurrency": "^1.1.7",
+    "ember-style-modifier": "^0.5.0"
   }
 }

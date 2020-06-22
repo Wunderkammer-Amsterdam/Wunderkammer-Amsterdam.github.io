@@ -1,0 +1,5 @@
+<div {{did-insert this.initiateLoad @url}} {{did-update this.initiateLoad @url}} {{style this.cssProperties}} ...attributes>
+  {{#if this.markdown}}
+    {{markdown-to-html this.markdown tagName=""}}
+  {{/if}}
+</div>

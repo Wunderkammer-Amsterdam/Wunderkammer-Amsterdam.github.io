@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 py-5">
+      <h2>Leden</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5 small">
+
+      <ul class="list-unstyled">
+        {{#each this.members as |member|}}
+          <li data-slug={{member.slug}}>
+            <LinkTo @route="members" @model={{member}} class="d-flex">
+              <img src={{member.profileImgSmallSrc}} class="d-none d-md-inline img-fluid rounded-circle" style="max-width: 3rem; max-height: 3rem;min-width: 3rem; min-height: 3rem;">
+              <div class="ml-2">
+                <span class="font-weight-bold">{{member.title}}</span>
+                <p class="font-italic">{{lowercase member.tagLine}}</p>
+              </div>
+            </LinkTo>
+          </li>
+        {{/each}}
+      </ul>
+
+    </div>
+
+    <div class="col-7">
+      <FromElsewhere @name="members-section"/>
+      <hr>
+      {{#if this.nextAvailableMember}}
+        <button type="button" class="btn btn-link"{{on "click" (action this.activateMember this.nextAvailableMember)}} title={{this.nextAvailableMember.title}}>next</button>
+      {{/if}}
+    </div>
+  </div>
+
+
+</div>
