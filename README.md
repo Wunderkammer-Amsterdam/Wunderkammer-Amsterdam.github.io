@@ -1,4 +1,4 @@
-# wunderkammer
+# wunderkammer-amsterdam
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
@@ -16,7 +16,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd wunderkammer`
+* `cd wunderkammer-amsterdam`
 * `yarn install`
 
 ## Running / Development
@@ -47,4 +47,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Simply push to master and it will be published automaticly...  see [wunderkammer-amsterdam.github.io](https://wunderkammer-amsterdam.github.io)
+Specify what it takes to deploy your app.
+
+## Further Reading / Useful Links
+
+* [ember.js](https://emberjs.com/)
+* [ember-cli](https://ember-cli.com/)
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

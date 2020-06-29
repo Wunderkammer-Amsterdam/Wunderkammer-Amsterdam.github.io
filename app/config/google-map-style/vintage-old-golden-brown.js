@@ -1,52 +1,52 @@
 export default [
   {
-    featureType: "all",
-    elementType: "all",
+    featureType: 'all',
+    elementType: 'all',
     stylers: [
       {
-        color: "#ff7000",
+        color: '#ff7000',
       },
       {
-        lightness: "69",
+        lightness: '69',
       },
       {
-        saturation: "100",
+        saturation: '100',
       },
       {
-        weight: "1.17",
+        weight: '1.17',
       },
       {
-        gamma: "2.04",
+        gamma: '2.04',
       },
     ],
   },
   {
-    featureType: "all",
-    elementType: "geometry",
+    featureType: 'all',
+    elementType: 'geometry',
     stylers: [
       {
-        color: "#cb8536",
+        color: '#cb8536',
       },
     ],
   },
   {
-    featureType: "all",
-    elementType: "labels",
+    featureType: 'all',
+    elementType: 'labels',
     stylers: [
       {
-        color: "#ffb471",
+        color: '#ffb471',
       },
       {
-        lightness: "66",
+        lightness: '66',
       },
       {
-        saturation: "100",
+        saturation: '100',
       },
     ],
   },
   {
-    featureType: "all",
-    elementType: "labels.text.fill",
+    featureType: 'all',
+    elementType: 'labels.text.fill',
     stylers: [
       {
         gamma: 0.01,
@@ -57,8 +57,8 @@ export default [
     ],
   },
   {
-    featureType: "all",
-    elementType: "labels.text.stroke",
+    featureType: 'all',
+    elementType: 'labels.text.stroke',
     stylers: [
       {
         saturation: -31,
@@ -75,35 +75,35 @@ export default [
     ],
   },
   {
-    featureType: "all",
-    elementType: "labels.icon",
+    featureType: 'all',
+    elementType: 'labels.icon',
     stylers: [
       {
-        visibility: "off",
+        visibility: 'off',
       },
     ],
   },
   {
-    featureType: "landscape",
-    elementType: "all",
+    featureType: 'landscape',
+    elementType: 'all',
     stylers: [
       {
-        lightness: "-8",
+        lightness: '-8',
       },
       {
-        gamma: "0.98",
+        gamma: '0.98',
       },
       {
-        weight: "2.45",
+        weight: '2.45',
       },
       {
-        saturation: "26",
+        saturation: '26',
       },
     ],
   },
   {
-    featureType: "landscape",
-    elementType: "geometry",
+    featureType: 'landscape',
+    elementType: 'geometry',
     stylers: [
       {
         lightness: 30,
@@ -114,8 +114,8 @@ export default [
     ],
   },
   {
-    featureType: "poi",
-    elementType: "geometry",
+    featureType: 'poi',
+    elementType: 'geometry',
     stylers: [
       {
         saturation: 20,
@@ -123,8 +123,8 @@ export default [
     ],
   },
   {
-    featureType: "poi.park",
-    elementType: "geometry",
+    featureType: 'poi.park',
+    elementType: 'geometry',
     stylers: [
       {
         lightness: 20,
@@ -135,8 +135,8 @@ export default [
     ],
   },
   {
-    featureType: "road",
-    elementType: "geometry",
+    featureType: 'road',
+    elementType: 'geometry',
     stylers: [
       {
         lightness: 10,
@@ -147,8 +147,8 @@ export default [
     ],
   },
   {
-    featureType: "road",
-    elementType: "geometry.stroke",
+    featureType: 'road',
+    elementType: 'geometry.stroke',
     stylers: [
       {
         saturation: 25,
@@ -159,14 +159,14 @@ export default [
     ],
   },
   {
-    featureType: "water",
-    elementType: "all",
+    featureType: 'water',
+    elementType: 'all',
     stylers: [
       {
         lightness: -20,
       },
       {
-        color: "#ecc080",
+        color: '#ecc080',
       },
     ],
   },

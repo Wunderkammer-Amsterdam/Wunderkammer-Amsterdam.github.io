@@ -11,17 +11,12 @@ const {
   APP: { version },
 } = ENV;
 
-export default class MarkdownFromUrlComponent extends Component {
-  minHeight = null;
-  minWidth = null;
-  replaceHash = null;
-
-  currentUrl = null;
-  @tracked markdown = null;
+export default class UtilMarkdownFromUrlComponent extends Component {
+  @tracked markdown;
 
   @action
-  initiateLoad(element, [url]) {
-    this.markdown = false;
+  initiateLoad(_element, [url]) {
+    this.markdown = null;
 
     if (this.currentUrl === url) {
       return;
@@ -29,52 +24,38 @@ export default class MarkdownFromUrlComponent extends Component {
 
     this.currentUrl = url;
 
-    this.setupTask.perform(url).then((markdown) => {
-      if (typeof markdown === 'string') {
+    this.setupTask.perform(url).then((markdownOrError) => {
+      if (typeof markdownOrError === 'string') {
         if (!isNone(this.replaceHash)) {
           for (let key in this.replaceHash) {
-            markdown = markdown.replace(new RegExp(`\\[${key}\\]`, 'g'), this.replaceHash[key]);
+            markdownOrError = markdownOrError.replace(new RegExp(`\\[${key}\\]`, 'g'), this.replaceHash[key]);
           }
         }
 
-        this.markdown = markdown;
+        this.markdown = markdownOrError;
       }
     });
   }
 
-  @computed('args.{minHeight,minWidth}', 'setupTask.isRunning')
+  @computed('args.{cssWhileLoading,cssWhileIdle}', 'setupTask.isRunning')
   get cssProperties() {
-    const hash = {
-      overflow: 'hidden',
-    };
-
     if (this.setupTask.isRunning) {
-      if (this.args.minHeight) {
-        hash['min-height'] = this.args.minHeight;
-      }
-      if (this.args.minWidth) {
-        hash['min-width'] = this.args.minWidth;
-      }
+      return Object.assign({}, this.args.cssWhileIdle || {}, this.args.cssWhileLoading || {});
     }
-
-    return hash;
+    return this.args.cssWhileIdle || {};
   }
 
-  @(task(function*(url) {
+  @(task(function* (url) {
     let result;
     try {
       result = yield this.fetchMarkdownTask.perform(url);
     } catch (error) {
       switch (true) {
         case error instanceof NotFoundError:
-          //          if (locale !== 'en') {
-          //           result = yield this.setupTask.perform(key, 'en');
-          //        } else {
           result = 404;
-          //      }
           break;
         default:
-          result = false;
+          result = 0;
       }
     }
 
@@ -82,7 +63,7 @@ export default class MarkdownFromUrlComponent extends Component {
   }).enqueue())
   setupTask;
 
-  @task(function*(url) {
+  @task(function* (url) {
     url = `${url}?_=${version}`;
 
     return yield fetch(url).then((response) => {

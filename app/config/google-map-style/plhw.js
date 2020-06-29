@@ -4,81 +4,81 @@ export default [
     elementType: 'labels',
     stylers: [
       {
-        visibility: 'off'
-      }
-    ]
+        visibility: 'off',
+      },
+    ],
   },
   {
     featureType: 'transit',
     elementType: 'labels',
     stylers: [
       {
-        visibility: 'off'
-      }
-    ]
+        visibility: 'off',
+      },
+    ],
   },
   {
     featureType: 'poi',
     elementType: 'labels',
     stylers: [
       {
-        visibility: 'off'
-      }
-    ]
+        visibility: 'off',
+      },
+    ],
   },
   {
     featureType: 'water',
     elementType: 'labels',
     stylers: [
       {
-        visibility: 'off'
-      }
-    ]
+        visibility: 'off',
+      },
+    ],
   },
   {
     featureType: 'road',
     elementType: 'labels.icon',
     stylers: [
       {
-        visibility: 'off'
-      }
-    ]
+        visibility: 'off',
+      },
+    ],
   },
   {
     stylers: [
       {
-        hue: '#00aaff'
+        hue: '#00aaff',
       },
       {
-        saturation: -100
+        saturation: -100,
       },
       {
-        gamma: 2.15
+        gamma: 2.15,
       },
       {
-        lightness: 12
-      }
-    ]
+        lightness: 12,
+      },
+    ],
   },
   {
     featureType: 'road',
     elementType: 'labels.text.fill',
     stylers: [
       {
-        visibility: 'on'
+        visibility: 'on',
       },
       {
-        lightness: 24
-      }
-    ]
+        lightness: 24,
+      },
+    ],
   },
   {
     featureType: 'road',
     elementType: 'geometry',
     stylers: [
       {
-        lightness: 57
-      }
-    ]
-  }
+        lightness: 57,
+      },
+    ],
+  },
 ];

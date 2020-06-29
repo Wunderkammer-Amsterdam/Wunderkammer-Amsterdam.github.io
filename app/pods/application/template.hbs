@@ -1,17 +1,21 @@
 
+<!-- Fires DoThing on keydown of alt plus any key -->
+{{on-key 'ArrowUp' this.previousSection}}
+{{on-key 'ArrowDown' this.nextSection}}
+
 <Section class="bg-primary">
   <SectionTitle/>
 </Section>
 
-<Section class="bg-secondary">
+<Section class="bg-secondary py-5">
   <SectionAbout/>
 </Section>
 
 <Section>
-  <SectionImpressions/>
+  <SectionImpressions class="bg-secondary" />
 </Section>
 
-<Section class="bg-secondary">
+<Section class="bg-secondary py-5" @routeId="members">
   <SectionMembers @members={{this.members}} />
 </Section>
 
@@ -19,7 +23,7 @@
   <SectionMap/>
 </Section>
 
-<Section class="bg-secondary">
+<Section class="bg-secondary py-5" @routeId="contact">
   <SectionContact/>
 </Section>
 

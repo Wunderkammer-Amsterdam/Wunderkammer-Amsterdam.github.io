@@ -1,1 +1,3 @@
-<ToElsewhere @named="members-section" @send={{component "section-members/member" member=this.model}}/>
+<Portal @target="members-section">
+  <SectionMembers::Member @member={{this.model}}/>
+</Portal>

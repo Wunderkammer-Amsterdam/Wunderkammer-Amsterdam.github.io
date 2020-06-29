@@ -1,7 +1,9 @@
-<div {{did-insert this.repositionSelf @member}} {{did-update this.repositionSelf @member}} {{style this.cssProperties}} ...attributes>
+<div class="pb-5" {{did-insert this.repositionSelf @member}} {{did-update this.repositionSelf @member}} {{style this.cssProperties}} ...attributes>
   <h4>{{@member.title}}</h4>
   <p>{{@member.tagLine}}</p>
-  <img class="img-fluid" src="{{@member.profileImgLargeSrc}}" style="max-height: 8rem;"/>
 
-  <Util::MarkdownFromUrl @url={{@member.profileTextSrc}} @minHeight="40rem;" class="small"/>
+  <img class="img-fluid" src="{{@member.profileImgLargeSrc}}" alt="" role="presentation" style="max-height: 8rem;"/>
+
+  <Util::MarkdownFromUrl @url={{@member.profileTextSrc}}
+                         class="small"/>
 </div>

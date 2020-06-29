@@ -6,6 +6,4 @@
 Nederland<br>
 </address>
 
-<a href="tel:+31 6 28123730">+31 6 28123730</a>
-
-<small>We hebben momenteel plaats... Wil je een keertje de sfeer proeven? Wees welkom.</small>
+<p>We hebben momenteel plaats... Wil je een keertje de sfeer proeven? Wees welkom.</p>

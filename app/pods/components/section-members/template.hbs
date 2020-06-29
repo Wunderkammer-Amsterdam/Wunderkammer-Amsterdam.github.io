@@ -11,7 +11,7 @@
         {{#each this.members as |member|}}
           <li data-slug={{member.slug}}>
             <LinkTo @route="members" @model={{member}} class="d-flex">
-              <img src={{member.profileImgSmallSrc}} class="d-none d-md-inline img-fluid rounded-circle" style="max-width: 3rem; max-height: 3rem;min-width: 3rem; min-height: 3rem;">
+              <img src={{member.profileImgSmallSrc}} class="d-none d-md-inline img-fluid rounded-circle" alt="" role="presentation" style="max-width: 3rem; max-height: 3rem;min-width: 3rem; min-height: 3rem;">
               <div class="ml-2">
                 <span class="font-weight-bold">{{member.title}}</span>
                 <p class="font-italic">{{lowercase member.tagLine}}</p>
@@ -24,10 +24,10 @@
     </div>
 
     <div class="col-7">
-      <FromElsewhere @name="members-section"/>
-      <hr>
+      <PortalTarget @name="members-section" />
+
       {{#if this.nextAvailableMember}}
-        <button type="button" class="btn btn-link"{{on "click" (action this.activateMember this.nextAvailableMember)}} title={{this.nextAvailableMember.title}}>next</button>
+        <button type="button" class="btn btn-link"{{on "click" (fn this.activateMember this.nextAvailableMember)}} title={{this.nextAvailableMember.title}}>next</button>
       {{/if}}
     </div>
   </div>

@@ -1,26 +1,15 @@
 <LeafletMap @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}} @scrollWheelZoom={{false}} as |layers|>
 
-
   <GoogleMutantLayer @type={{"roadmap"}} @isTrafficOn={{false}} @isTransitOn={{false}} @styles={{this.mapStyle}}/>
 
   <layers.marker @location={{hash lng=this.lng lat=this.lat}} as |marker|>
     <marker.popup>
       <h3>Wunderkammer</h3>
       <address>Kanaalstraat 149A<br>
-      1054 XD Amsterdam<br>
-      Nederland
+        1054 XD Amsterdam<br>
+        Nederland
       </address>
     </marker.popup>
   </layers.marker>
-
-<!--  <DivOverlayLayer>-->
-<!--    <div>-->
-<!--      <h3>Wunderkammer</h3>-->
-<!--      <address>Kanaalstraat 149A<br>-->
-<!--        1054 XD Amsterdam<br>-->
-<!--        Nederland-->
-<!--      </address>-->
-<!--    </div>-->
-<!--  </DivOverlayLayer>-->
 
 </LeafletMap>

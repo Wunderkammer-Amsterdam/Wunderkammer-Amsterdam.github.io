@@ -4,6 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'wunderkammer',
     podModulePrefix: 'wunderkammer/pods',
+    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
