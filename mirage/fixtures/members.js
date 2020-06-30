@@ -23,7 +23,7 @@ export default shuffle([
     id: 3,
     title: 'Eric',
     slug: 'eric',
-    'tag-line': 'Sociaal adviseur',
+    'tag-line': 'Sociaal ondernemer',
   },
   {
     id: 4,

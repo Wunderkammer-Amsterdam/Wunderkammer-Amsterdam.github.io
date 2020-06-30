@@ -10,7 +10,7 @@
       <ul class="list-unstyled">
         {{#each this.members as |member|}}
           <li data-slug={{member.slug}}>
-            <LinkTo @route="members" @model={{member}} class="d-flex">
+            <LinkTo @route="members.member" @model={{member}} class="d-flex">
               <img src={{member.profileImgSmallSrc}} class="d-none d-md-inline img-fluid rounded-circle" alt="" role="presentation" style="max-width: 3rem; max-height: 3rem;min-width: 3rem; min-height: 3rem;">
               <div class="ml-2">
                 <span class="font-weight-bold">{{member.title}}</span>
@@ -24,13 +24,7 @@
     </div>
 
     <div class="col-7">
-      <PortalTarget @name="members-section" />
-
-      {{#if this.nextAvailableMember}}
-        <button type="button" class="btn btn-link"{{on "click" (fn this.activateMember this.nextAvailableMember)}} title={{this.nextAvailableMember.title}}>next</button>
-      {{/if}}
+      <PortalTarget @name="members-section::member"/>
     </div>
   </div>
-
-
 </div>

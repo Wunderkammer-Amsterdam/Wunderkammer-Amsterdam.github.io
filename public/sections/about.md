@@ -12,6 +12,6 @@ We bieden een ruime- en lichte werkplek van ongeveer 100m2 in een oud klaslokaal
 
 Printer aanwezig, internet, belruimte, een goed eenvoudige keuken, koffie en thee. Er zijn een stuk of 8 bureaus aanwezig.
 
-We werken in priciepe met contracten voor onbepaalde tijd met een opzegtermijn van 2 maanden. Ben je echter op zoek naar iets voor alleen deze zomer dan is dat ook mogelijk via onze zomeraanbieding. Tot eind augustus voor €400.
+We werken in priciepe met contracten voor onbepaalde tijd met een opzegtermijn van 2 maanden. Ben je echter op zoek naar iets voor alleen deze zomer dan is dat ook mogelijk via onze zomeraanbieding. Tot eind augustus voor €300,= of €500,= (flex/vast).
 
 Bovendien hebben we momenteel plaats... Wil je een keertje de sfeer proeven? Wees welkom.

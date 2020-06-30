@@ -1,11 +1,13 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
+import { scheduleOnce } from '@ember/runloop';
 
 const list = [];
 
 export default class SectionComponent extends Component {
   @service inViewport;
+  @service router;
 
   @action
   onViewIn(element) {
@@ -14,7 +16,16 @@ export default class SectionComponent extends Component {
     }
 
     list.push(this.args.routeId);
-    console.log('in-view', list);
+
+    const route = this.args.routeId !== 'home' ? this.args.routeId : 'application';
+
+    if (!this.router.currentRoute.name.startsWith(route)) {
+      scheduleOnce('afterRender', this, this.router.transitionTo(route));
+    }
+  }
+
+  runLater(route) {
+    this.router.transitionTo(route);
   }
 
   @action
@@ -27,25 +38,16 @@ export default class SectionComponent extends Component {
   }
 
   @action
-  didInsertNode() {
-    alert(1);
-    const loader = document.getElementById('loader');
-    const viewportTolerance = { bottom: 200 };
-    const { onEnter, _onExit } = this.inViewport.watchElement(loader, { viewportTolerance });
-    // pass the bound method to `onEnter` or `onExit`
-    onEnter(this.didEnterViewport.bind(this));
+  sectionInserted(element) {
+    const name = this.router.currentRouteName.split('.').shift();
+
+    if (this.args.routeId === name) {
+      window.scrollTo({ top: element.offsetTop });
+      // element.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+    }
   }
 
-  didEnterViewport() {
-    // do some other stuff
-    // this.infinityLoad();
+  get classIdentifier() {
+    return `section-${this.args.routeId}`;
   }
-
-  // willDestroy() {
-  //   // need to manage cache yourself if you don't use the mixin
-  //   const loader = document.getElementById('loader');
-  //   this.inViewport.stopWatching(loader);
-  //
-  //   super.willDestroy(...arguments);
-  // }
 }
