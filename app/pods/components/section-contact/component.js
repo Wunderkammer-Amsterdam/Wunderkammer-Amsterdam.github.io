@@ -9,8 +9,9 @@ import lookupValidator from 'ember-changeset-validations';
 export default class SectionContactComponent extends Component {
   @tracked changeset;
   @tracked showAllValidations = false;
+  @tracked isSubmitted = false;
 
-  @tracked gRecaptcha;
+  @tracked reCaptchaReference;
 
   constructor(...rest) {
     super(...rest);
@@ -18,38 +19,33 @@ export default class SectionContactComponent extends Component {
     this.changeset = new Changeset(new ContactForm(), lookupValidator(ContactFormValidations), ContactFormValidations);
   }
 
-  @task(function*() {
-    yield timeout(this.advanceDelay);
-
-    this.currentIndex = (this.currentIndex + 1) % this.images.length;
-
-    this.animateTask.perform();
-  })
-  animateTask;
-
   @action
   onSubmit() {
     this.changeset.validate().then(() => {
       if (this.changeset.isInvalid) {
         this.showAllValidations = true;
       } else {
-        this.changeset.save();
+        this.changeset.save().then((result) => {
+          console.log(result);
 
-        console.log(this.changeset.data);
+          if (result['success'] === true) {
+            this.isSubmitted = true;
+          }
+        });
       }
     });
   }
 
   @action
-  onCaptchaResolved(reCaptchaResponse) {
-    console.log('resolved', reCaptchaResponse);
-
-    this.changeset.reCaptachResponse = reCaptchaResponse;
+  onCaptchaResolved(token) {
+    this.changeset.reCaptchaToken = token;
+    this.changeset.validate();
   }
 
   @action
   onCaptchaExpired() {
-    console.log('expired');
-    this.gRecaptcha.resetReCaptcha();
+    this.changeset.reCaptchaToken = null;
+    this.changeset.validate();
+    this.reCaptchaReference.resetReCaptcha();
   }
 }
