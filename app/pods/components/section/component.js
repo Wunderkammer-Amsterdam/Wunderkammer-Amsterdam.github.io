@@ -20,12 +20,8 @@ export default class SectionComponent extends Component {
     const route = this.args.routeId !== 'home' ? this.args.routeId : 'application';
 
     if (!this.router.currentRoute.name.startsWith(route)) {
-      scheduleOnce('afterRender', this, this.router.transitionTo(route));
+      this.router.transitionTo(route);
     }
-  }
-
-  runLater(route) {
-    this.router.transitionTo(route);
   }
 
   @action

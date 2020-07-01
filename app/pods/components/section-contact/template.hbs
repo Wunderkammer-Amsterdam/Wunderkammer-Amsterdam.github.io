@@ -1,7 +1,27 @@
 <div class="container align-self-center" ...attributes>
   <h2>Contact</h2>
   <Util::MarkdownFromUrl @url="/sections/contact.md" class="small"/>
-
+  <style>
+  </style>
   <PortalTarget @name="section-contact" />
+
+  <BsForm @model={{this.changeset}}
+          @submitOnEnter={{true}}
+          @onSubmit={{action this.onSubmit}}
+          @showAllValidations={{this.showAllValidations}} as |form|>
+    <form.element @property="name" @label="Naam" as |element|>
+      <element.control class="bg-transparent" />
+    </form.element>
+    <form.element @property="subject" @label="Onderwerp" as |element|>
+      <element.control class="bg-transparent" />
+    </form.element>
+    <form.element @controlType="textarea" @property="message" @label="Boodschap" as |element|>
+      <element.control class="bg-transparent" rows="8"/>
+    </form.element>
+
+    <GRecaptcha @onSuccess={{action "onCaptchaResolved"}} @onExpired={{action "onCaptchaExpired"}} @ref={{mut this.gRecaptcha}} />
+    <BsButton @buttonType="submit">verzend</BsButton>
+  </BsForm>
+
 </div>
 

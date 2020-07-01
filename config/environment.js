@@ -32,6 +32,11 @@ module.exports = function (environment) {
     include: true,
   };
 
+  ENV['gReCaptcha'] = {
+    jsUrl: 'https://www.google.com/recaptcha/api.js?render=explicit', // default
+    siteKey: '6Ldv3KsZAAAAAL6IeJVB6aL514h36HBeRBvb9uvk',
+  };
+
   ENV['contentSecurityPolicy'] = {
     'default-src': "'none'",
     'script-src': "'self' 'unsafe-eval' *.googleapis.com",
