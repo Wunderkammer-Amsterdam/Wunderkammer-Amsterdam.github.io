@@ -34,7 +34,7 @@ module.exports = function (environment) {
 
   ENV['gReCaptcha'] = {
     jsUrl: 'https://www.google.com/recaptcha/api.js?render=explicit', // default
-    siteKey: '6Ldv3KsZAAAAAL6IeJVB6aL514h36HBeRBvb9uvk',
+    siteKey: '6LfxAKwZAAAAAMRHZAx0NYh6Mr0rzHnQOwzgL8-4', // secret is is stored in github action keys, and placed into /public/.htaccess
   };
 
   ENV['contentSecurityPolicy'] = {

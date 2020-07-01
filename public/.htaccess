@@ -19,3 +19,5 @@ Allow from env=!REQUIRE_AUTH
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+SetEnv GOOGLE_RECAPTCHA_SECRET "$GOOGLE_RECAPTCHA_SECRET"

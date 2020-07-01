@@ -42,7 +42,9 @@ export default class SectionContactComponent extends Component {
 
   @action
   onCaptchaResolved(reCaptchaResponse) {
-    this.changeset.reCaptachResponse(reCaptchaResponse);
+    console.log('resolved', reCaptchaResponse);
+
+    this.changeset.reCaptachResponse = reCaptchaResponse;
   }
 
   @action

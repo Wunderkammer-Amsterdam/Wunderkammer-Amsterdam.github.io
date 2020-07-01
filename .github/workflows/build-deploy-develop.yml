@@ -12,25 +12,23 @@ jobs:
 
     steps:
 
-    - name: Checkout 🛎️
+    - name: Checkout
       uses: actions/checkout@v2
       with:
         persist-credentials: false
 
-    - name: Install frontend dependencies
+    - name: Install dependencies and build
       run: |
         yarn install
-
-    - name: Build frontend
-      run: |
         yarn build
+        sed -i 's/\$GOOGLE_RECAPTCHA_SECRET/${{ secrets.GOOGLE_RECAPTCHA_SECRET }}/g' dist/.htaccess
 
-    - name: Install backend dependencies
-      uses: php-actions/composer@v1
+    - name: Install PHP dependencies (into /dist/vendor)
+      uses: nick-zh/composer-php@php7.4
       with:
-        command: install --working-dir=dist/ --no-suggest --prefer-dist
+        action: 'install --working-dir=./dist --no-suggest --prefer-dist --no-interaction --no-progress'
 
-    - name: Persist distribution
+    - name: Persist distribution directory (/dist as 'build-dev')
       uses: actions/upload-artifact@v2
       with:
         name: build-dev
@@ -43,7 +41,7 @@ jobs:
 
     steps:
 
-    - name: Checkout 🛎️
+    - name: Checkout
       uses: actions/checkout@v2
       with:
         persist-credentials: false
@@ -54,7 +52,7 @@ jobs:
         name: build-dev
         path: dist
 
-    - name: Deploy 🚀
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -71,7 +69,7 @@ jobs:
 
     steps:
 
-    - name: Checkout 🛎️
+    - name: Checkout
       uses: actions/checkout@v2
       with:
         persist-credentials: false
