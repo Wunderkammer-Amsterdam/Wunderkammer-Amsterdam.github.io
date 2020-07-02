@@ -1,3 +1,5 @@
+import ENV from 'wunderkammer/config/environment';
+
 export default function () {
   this.get('/members/:id', (schema, request) => {
     return schema.members.find(request.params.id);
@@ -12,4 +14,5 @@ export default function () {
 
   this.passthrough('/members/**');
   this.passthrough('/sections/**');
+  this.passthrough('/contact-form.php');
 }

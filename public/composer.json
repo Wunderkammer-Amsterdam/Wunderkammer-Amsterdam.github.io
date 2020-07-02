@@ -1,0 +1,13 @@
+{
+    "name": "wunderkammer-amsterdam/website",
+    "description": "Serverside for Wunderkammer Amsterdam website",
+    "require": {
+        "google/recaptcha": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "Bas Kamer",
+            "email": "baskamer@gmail.com"
+        }
+    ]
+}

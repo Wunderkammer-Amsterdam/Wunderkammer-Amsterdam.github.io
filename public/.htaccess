@@ -1,3 +1,16 @@
+AuthType Basic
+AuthName "Closed"
+AuthUserFile /home/public/sites/dev.wunderkammeramsterdam.nl/.htpasswd
+
+SetEnvIf Host wunderkammeramsterdam\.nl REQUIRE_AUTH=true
+SetEnvIf Host dev\.wunderkammeramsterdam\.nl REQUIRE_AUTH=true
+
+Order Deny,Allow
+Deny from all
+Satisfy any
+Require valid-user
+Allow from env=!REQUIRE_AUTH
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -6,3 +19,5 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+SetEnv GOOGLE_RECAPTCHA_SECRET "$GOOGLE_RECAPTCHA_SECRET"
