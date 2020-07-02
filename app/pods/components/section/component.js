@@ -1,7 +1,6 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
-import { scheduleOnce } from '@ember/runloop';
 
 const list = [];
 
@@ -39,11 +38,26 @@ export default class SectionComponent extends Component {
 
     if (this.args.routeId === name) {
       window.scrollTo({ top: element.offsetTop });
-      // element.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
     }
+  }
+
+  get classes() {
+    const classes = [];
+
+    classes.push(this.classIdentifier);
+
+    if (this.isActive) {
+      classes.push('is-active');
+    }
+
+    return classes.join(' ');
   }
 
   get classIdentifier() {
     return `section-${this.args.routeId}`;
+  }
+
+  get isActive() {
+    return this.router.currentRoute.name.startsWith(this.args.routeId);
   }
 }
