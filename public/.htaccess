@@ -13,11 +13,25 @@ Allow from env=!REQUIRE_AUTH
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
   RewriteBase /
+
+  # rewrite http > https
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # rewrite www.wunderkammeramsterdam.nl > https://www.wunderkammeramsterdam.nl (only for production)
+  RewriteCond %{HTTP_HOST} ^www.wunderkammeramsterdam.nl$ [NC]
+  RewriteRule ^(.*)$ https://wunderkammeramsterdam.nl/$1 [R=301,L]
+
+  # rewrite 404 to index.html (deeplinks in SPA)
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
+
 </IfModule>
 
+# set via github action from `secrets` whils deploying
 SetEnv GOOGLE_RECAPTCHA_SECRET "$GOOGLE_RECAPTCHA_SECRET"
+SetEnv CONTACT_FORM_RECIPIENT "$CONTACT_FORM_RECIPIENT"
