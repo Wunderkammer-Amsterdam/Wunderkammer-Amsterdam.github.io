@@ -2,8 +2,6 @@ import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
-const list = [];
-
 export default class SectionComponent extends Component {
   @service inViewport;
   @service router;
@@ -14,22 +12,11 @@ export default class SectionComponent extends Component {
       return;
     }
 
-    list.push(this.args.routeId);
-
     const route = this.args.routeId !== 'home' ? this.args.routeId : 'application';
 
     if (!this.router.currentRoute.name.startsWith(route)) {
       this.router.transitionTo(route);
     }
-  }
-
-  @action
-  onViewLeave(element) {
-    if (!this.args.routeId) {
-      return;
-    }
-
-    list.removeObject(this.args.routeId);
   }
 
   @action
