@@ -19,14 +19,13 @@ if (! $secret = getenv('GOOGLE_RECAPTCHA_SECRET')) {
     exit('GOOGLE_RECAPTCHA_SECRET env is missing');
 }
 
+// @todo make this configurable
 $recipient = 'baskamer@gmail.com';
 
 $data = json_decode(file_get_contents('php://input'), true);
 
 $recaptcha = new \ReCaptcha\ReCaptcha($secret);
 $resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])
-    //->setExpectedAction($_POST['action'])
-    //->setScoreThreshold(0.5)
     ->verify($data['reCaptchaToken'], $_SERVER['REMOTE_ADDR']);
 
 $responseJson = [];
