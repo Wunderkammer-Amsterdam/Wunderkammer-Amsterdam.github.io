@@ -27,7 +27,7 @@ $recaptcha = new \ReCaptcha\ReCaptcha($secret);
 $resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])
     //->setExpectedAction($_POST['action'])
     //->setScoreThreshold(0.5)
-    ->verify($data['reCaptachToken'], $_SERVER['REMOTE_ADDR']);
+    ->verify($data['reCaptchaToken'], $_SERVER['REMOTE_ADDR']);
 
 $responseJson = [];
 
