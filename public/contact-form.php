@@ -66,8 +66,13 @@ if (mail($recipient, "[wunderkammeramsterdam.nl] contact verzoek", $body)) {
     $responseJson['success'] = true;
 
     if (filter_var($data['via'], FILTER_VALIDATE_EMAIL)) {
-        $body = sprintf("Wat leuk van je te horen! Ik neem zo snel mogelijk contact met je op. \n\nMet groet, Eric");
-        mail($data['via'], "[wunderkammeramsterdam.nl] terugbelafspraak", $body);
+        $body = <<<EOT
+Wat leuk van je te horen! Wij nemen zo snel mogelijk contact met je op.
+
+Met groet, de Wunderkammer
+EOT;
+
+        mail($data['via'], "[wunderkammeramsterdam.nl] contact verzoek", $body);
     }
 } else {
     $responseJson['error'] = 'Er kon helaas geen e-mail verzonden worden';
