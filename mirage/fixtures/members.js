@@ -73,10 +73,4 @@ export default shuffle([
     slug: 'nienke',
     'tag-line': 'Ontwerper',
   },
-  {
-    id: 12,
-    title: 'Rutger',
-    slug: 'rutger',
-    'tag-line': '...',
-  },
 ]);
