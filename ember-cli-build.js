@@ -12,7 +12,7 @@ module.exports = function (defaults) {
     fingerprint: {
       // https://github.com/rickharrison/broccoli-asset-rev
       enabled: isProductionLikeBuild,
-      exclude: ['favicon-*.png', 'members'],
+      exclude: ['favicon-*.png', 'members', 'assets'],
     },
   });
 
