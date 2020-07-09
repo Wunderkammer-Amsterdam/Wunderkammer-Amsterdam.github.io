@@ -5,7 +5,7 @@ class ContactForm {
   name = '';
   subject = '';
   message = '';
-  reCaptachToken = null;
+  reCaptchaToken = null;
 
   async save() {
     const url = '/contact-form.php';
@@ -18,7 +18,7 @@ class ContactForm {
     const response = await fetch(url, {
       method: 'POST',
       headers: headers,
-      body: JSON.stringify({ name: this.name, via: this.via, subject: this.subject, message: this.message, reCaptachToken: this.reCaptachToken }),
+      body: JSON.stringify({ name: this.name, via: this.via, subject: this.subject, message: this.message, reCaptchaToken: this.reCaptchaToken }),
     });
 
     return await response.json();
