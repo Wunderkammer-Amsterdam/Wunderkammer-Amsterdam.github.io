@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import ENV from 'wunderkammer/config/environment';
+import ENV from 'wonderkamer/config/environment';
 import fetch from 'fetch';
 import { action, computed } from '@ember/object';
 import { isNone } from '@ember/utils';

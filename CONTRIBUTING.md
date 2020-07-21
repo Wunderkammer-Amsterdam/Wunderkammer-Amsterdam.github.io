@@ -12,13 +12,13 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/Wunderkammer-Amsterdam/website wunderkammer-amsterdam`
-* `cd wunderkammer-amsterdam`
+* `git clone https://github.com/wonderkamer/website wonderkamer`
+* `cd wonderkamer`
 * `yarn install`
 
 ## Running / Development
 
-* `ember serve --proxy https://dev.wunderkammeramsterdam.nl`
+* `ember serve --proxy https://dev.wonderkamer.com`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 

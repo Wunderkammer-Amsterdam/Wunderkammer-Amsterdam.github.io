@@ -1,0 +1,28 @@
+AuthType Basic
+AuthName "Protected Area"
+AuthUserFile /var/www/clients/client14/web128/web/.htpasswd
+Require valid-user
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteBase /
+
+  # rewrite http > https
+  RewriteCond %{SERVER_PORT} 80
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
+
+  # rewrite www.wonderkamer.com > https://www.wonderkamer.com (only for production)
+  RewriteCond %{HTTP_HOST} ^www.wonderkamer.com$ [NC]
+  RewriteRule ^(.*)$ https://wonderkamer.com/$1 [R=301,L]
+
+  # rewrite 404 to index.html (deeplinks in SPA)
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# set via github action from `secrets` whils deploying
+SetEnv GOOGLE_RECAPTCHA_SECRET "$GOOGLE_RECAPTCHA_SECRET"
+SetEnv CONTACT_FORM_RECIPIENT "$CONTACT_FORM_RECIPIENT"
