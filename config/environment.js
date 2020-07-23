@@ -2,8 +2,8 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'wunderkammer',
-    podModulePrefix: 'wunderkammer/pods',
+    modulePrefix: 'wonderkamer',
+    podModulePrefix: 'wonderkamer/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -26,7 +26,7 @@ module.exports = function (environment) {
   ENV['ember-cli-mirage'] = { enabled: true, autostart: true };
 
   ENV['googleMutantLeaflet'] = {
-    apiKey: 'AIzaSyAdtRO3yA1Yp1LGDa8bA-dkDLNVit1fXvA',
+    apiKey: 'AIzaSyCzKKPg9tJyLo4MqB3quf4PPjKgTMwJ7Rk',
     libraries: [],
     include: true,
   };
@@ -51,7 +51,7 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
-    ENV.APP.baseUrlApi = 'https://dev.wunderkammeramsterdam.nl';
+    ENV.APP.baseUrlApi = 'https://dev.wonderkamer.com';
   }
 
   if (environment === 'test') {

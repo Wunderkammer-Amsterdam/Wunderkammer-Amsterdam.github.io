@@ -21,7 +21,15 @@ jobs:
       run: |
         yarn install
         yarn build
-        sed -i 's/\$GOOGLE_RECAPTCHA_SECRET/${{ secrets.GOOGLE_RECAPTCHA_SECRET }}/g' dist/.htaccess
+
+    - name: Copy development htaccess
+      uses: canastro/copy-file-action@master
+      with:
+        source: "public/htaccess-development.txt"
+        target: "dist/.htaccess"
+
+    - name: Text replace
+      run: sed -i 's/\$GOOGLE_RECAPTCHA_SECRET/${{ secrets.GOOGLE_RECAPTCHA_SECRET }}/g' dist/.htaccess
 
     - name: Install PHP dependencies (into /dist/vendor)
       uses: nick-zh/composer-php@php7.4
@@ -56,7 +64,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        REPOSITORY_NAME: Wunderkammer-Amsterdam/wunderkammer-amsterdam.github.io
+        REPOSITORY_NAME: wonderkamer/wonderkamer.github.io
         BRANCH: master # The branch the action should deploy to.
         FOLDER: dist # The folder the action should deploy.
 
@@ -84,7 +92,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         local-dir: dist/
-        ftp-server: sftp://sftp.greenconcepts.nl/public/sites/dev.wunderkammeramsterdam.nl
-        ftp-username: ${{ secrets.SFTP_USERNAME }}
-        ftp-password: ${{ secrets.SFTP_PASSWORD }}
+        ftp-server: sftp://s2.bushbaby.nl/web
+        ftp-username: wonderkamer_site_dev
+        ftp-password: ${{ secrets.DEV_SFTP_PASSWORD }}
         git-ftp-args: --insecure

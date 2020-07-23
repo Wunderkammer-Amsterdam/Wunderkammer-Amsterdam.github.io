@@ -21,7 +21,15 @@ jobs:
         run: |
           yarn install
           yarn build
-          sed -i 's/\$GOOGLE_RECAPTCHA_SECRET/${{ secrets.GOOGLE_RECAPTCHA_SECRET }}/g' dist/.htaccess
+
+      - name: Copy production htaccess
+        uses: canastro/copy-file-action@master
+        with:
+          source: "public/htaccess-production.txt"
+          target: "dist/.htaccess"
+
+      - name: Text replace
+        run: sed -i 's/\$GOOGLE_RECAPTCHA_SECRET/${{ secrets.GOOGLE_RECAPTCHA_SECRET }}/g' dist/.htaccess
 
       - name: Install PHP dependencies (into /dist/vendor)
         uses: nick-zh/composer-php@php7.4
@@ -57,7 +65,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           local-dir: dist/
-          ftp-server: sftp://sftp.greenconcepts.nl/public/sites/www.wunderkammeramsterdam.nl
-          ftp-username: ${{ secrets.SFTP_USERNAME }}
-          ftp-password: ${{ secrets.SFTP_PASSWORD }}
+          ftp-server: sftp://s2.bushbaby.nl/web
+          ftp-username: wonderkamer_site_prod
+          ftp-password: ${{ secrets.PRD_SFTP_PASSWORD }}
           git-ftp-args: --insecure
