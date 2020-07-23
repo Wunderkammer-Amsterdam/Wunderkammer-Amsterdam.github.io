@@ -1,6 +1,6 @@
 {
-    "name": "wunderkammer-amsterdam/website",
-    "description": "Serverside for Wunderkammer Amsterdam website",
+    "name": "wonderkamer/website",
+    "description": "stichting Wonderkamer website - backend",
     "require": {
         "google/recaptcha": "^1.2"
     },

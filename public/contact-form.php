@@ -20,7 +20,7 @@ if (! $secret = getenv('GOOGLE_RECAPTCHA_SECRET')) {
 }
 
 // @todo make this configurable
-$recipient = 'baskamer@gmail.com';
+$recipient = 'hallo@wonderkamer.com';
 
 $data = json_decode(file_get_contents('php://input'), true);
 
@@ -49,7 +49,7 @@ $message = $data['message'] ?: 'none';
 $via = $data['via'] ?: 'none';
 
 $body = <<<EOT
-Er is een bericht via het contactformulier van de wunderkammeramsterdam.nl website...
+Er is een bericht via het contactformulier van de wonderkamer.com website...
 
 Van : $name
 Via : $via
@@ -61,17 +61,19 @@ $message
 EOT;
 
 
-if (mail($recipient, "[wunderkammeramsterdam.nl] contact verzoek", $body)) {
+if (mail($recipient, "[wonderkamer.com] contact verzoek", $body)) {
     $responseJson['success'] = true;
 
     if (filter_var($data['via'], FILTER_VALIDATE_EMAIL)) {
         $body = <<<EOT
 Wat leuk van je te horen! Wij nemen zo snel mogelijk contact met je op.
 
-Met groet, de Wunderkammer
+Met vriendelijke groet,
+
+Wonderkamer
 EOT;
 
-        mail($data['via'], "[wunderkammeramsterdam.nl] contact verzoek", $body);
+        mail($data['via'], "[wonderkamer.com] contact verzoek", $body);
     }
 } else {
     $responseJson['error'] = 'Er kon helaas geen e-mail verzonden worden';

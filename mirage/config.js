@@ -1,4 +1,4 @@
-import ENV from 'wunderkammer/config/environment';
+import ENV from 'wonderkamer/config/environment';
 
 export default function () {
   this.get('/members/:id', (schema, request) => {
