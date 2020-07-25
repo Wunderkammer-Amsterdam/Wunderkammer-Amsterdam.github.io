@@ -1,13 +1,13 @@
-Een persoonlijk profiel op je CV, ook wel een profielschets genoemd, is een korte introductie over jezelf. In dit stukje
-tekst laat je eigenlijk zien wie je bent. Het is jouw moment om te stralen!
+Eric is een bevlogen innovator, een gepassioneerd verteller, een aanstekelijk inspirator en strategisch denker. Eric 
+verbindt grote lijnen met de wezenlijke details en heeft oog voor de essentie, menselijke maat en voor plezier.
 
-#### Waarom een profielschets?
+Eric studeerde technische bedrijfskunde aan de Universiteit van Twente met nadruk op strategisch management, industriële
+ marketing en innovatiemanagement. Hij werkte ruim tien jaar als lijn- en projectmanager in het bedrijfsleven, zowel in 
+ binnen- als in het buitenland (oa Maleisië, Polen, Frankrijk).
 
-Een persoonlijk profiel laat de mens achter de feiten zien. Ook al bestaat een profielschets maar uit een paar korte 
-zinnen, toch licht je daarmee al een tipje van de sluier op over wie jij bent. Dat maakt je meteen menselijk en 
-benaderbaar, waardoor je langer top-of-mind blijft bij de recruiter of werkgever.
+In 2004 verruilt hij het driedelig grijs voor de passie voor creativiteit en ondernemerschap. Hij ontwikkelt zich van 
+manager tot documentair fotograaf, conceptontwikkelaar en ondernemer.
 
-- Waar ben ik goed in?
-- Wat zijn mijn ambities?
-- Wat zoek ik in een nieuwe functie?
-- Wat maakt mij nou echt ‘mij’?
+In zijn vrije tijd studeert Eric (klassieke) zang, speelt gitaar, is een fanatiek buitensporter (wielrennen, hardlopen) 
+en houdt van fotografie, koken, cultuur, yoga, socratische gespreksvoering.
+
