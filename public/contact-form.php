@@ -2,6 +2,8 @@
 
 require_once('vendor/autoload.php');
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 // Redirect to HTTPS by default (for AppEngine)
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {

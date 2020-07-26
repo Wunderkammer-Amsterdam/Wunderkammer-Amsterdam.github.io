@@ -22,7 +22,3 @@ Require valid-user
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
-
-# set via github action from `secrets` whils deploying
-SetEnv GOOGLE_RECAPTCHA_SECRET "$GOOGLE_RECAPTCHA_SECRET"
-SetEnv CONTACT_FORM_RECIPIENT "$CONTACT_FORM_RECIPIENT"

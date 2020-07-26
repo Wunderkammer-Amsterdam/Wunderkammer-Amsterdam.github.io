@@ -2,7 +2,8 @@
     "name": "wonderkamer/website",
     "description": "stichting Wonderkamer website - backend",
     "require": {
-        "google/recaptcha": "^1.2"
+        "google/recaptcha": "^1.2",
+        "vlucas/phpdotenv": "^4.0"
     },
     "authors": [
         {
