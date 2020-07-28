@@ -5,26 +5,37 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-5 small">
+    <div class="col-12">
+      <BsAccordion @itemComponent="bs-accordion/item" @onChange={{action "onChange"}} @selected={{@member}} as |acc|>
+        {{#each @members as |member index|}}
+          <acc.item @titleComponent="bs-accordion/item/title" @bodyComponent="bs-accordion/item/body" @value={{member}} as |item|>
 
-      <ul class="list-unstyled">
-        {{#each this.members as |member|}}
-          <li data-slug={{member.slug}}>
-            <LinkTo @route="members.member" @model={{member}} class="d-flex">
-              <img src={{member.profileImgSmallSrc}} class="d-none d-md-inline img-fluid rounded-circle" alt="" role="presentation" style="max-width: 3rem; max-height: 3rem;min-width: 3rem; min-height: 3rem;">
-              <div class="ml-2">
-                <span class="font-weight-bold">{{member.title}}</span>
-                <p class="font-italic">{{lowercase member.tagLine}}</p>
+            <item.title class="py-4" data-slug={{member.slug}}>
+              <div class="d-flex justify-content-between align-items-start {{if (mod index 2) "flex-row" "flex-row-reverse"}}">
+                <img src={{member.profileImgSmallSrc}} class="img-fluid rounded-circle" alt="" role="presentation" style="max-width: 4rem; max-height: 4rem;min-width: 3rem; min-height: 3rem;">
+                <div class="{{if (mod index 2) "text-right" "text-left"}}">
+                  <h5 class="mb-0">{{member.title}}</h5>
+                  <p class="mb-0 font-italic">{{lowercase member.tagLine}}</p>
+                </div>
               </div>
-            </LinkTo>
-          </li>
+            </item.title>
+
+            <item.body>
+              <div class="row {{if (mod index 2) "flex-row-reverse" "flex-row"}}">
+                <div class="col-12 col-sm-6 col-md-5">
+                  <img class="img-fluid mb-0" src="{{member.profileImgLargeSrc}}" alt={{member.title}}/>
+                  <p class="small mb-0 {{if (mod index 2) "text-right" "text-left"}}">{{member.title}}, {{member.tagLine}}</p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-7">
+                  <Util::MarkdownFromUrl @url={{member.profileTextSrc}} />
+                </div>
+              </div>
+            </item.body>
+
+          </acc.item>
         {{/each}}
-      </ul>
-
-    </div>
-
-    <div class="col-7">
-      <PortalTarget @name="members-section::member"/>
+      </BsAccordion>
     </div>
   </div>
 </div>

@@ -14,6 +14,9 @@ module.exports = function (defaults) {
       enabled: isProductionLikeBuild,
       exclude: ['favicon-*.png', 'members', 'assets'],
     },
+    'ember-math-helpers': {
+      only: ['mod'],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

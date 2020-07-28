@@ -1,0 +1,3 @@
+<div class="{{if @collapsed "collapsed" "expanded"}} {{if @disabled "disabled"}}" {{on "click" (action "onClick")}} role="button" disabled={{@disabled}} ...attributes>
+  {{yield}}
+</div>
