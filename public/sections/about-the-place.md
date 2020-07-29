@@ -1,10 +1,8 @@
-### Over de plek
+### Locatie
+We zitten in de voormalige St. Vincentius jongensschool in de Cremerbuurt in Oud-West. 
 
-In deze ruime en lichte ruimte, een lokaal in een oude basisschool, hebben wij tot doel om voor 
-zelfstandig ondernemers, op-afstand werkers, creatieven en vrijwilligers een prettige en veilige werkplek te realiseren.
+Op de begane grond hebben we twee heringerichte schoollokalen en een tuin in gebruik als co-werkplek. 
+De overige verdiepingen zijn in gebruik als ateliers.
+De hoge ruimte krijgt met de grote ramen veel licht en heeft een huiselijke sfeer.
 
-Kenmerkend is het hoge plafond en de ramen aan de voor- en achterzijde, waardoor de kantoorruimte licht en open 
-aanvoelt. Daarnaast is er een fijne ruime tuin voor een lunch of overleg in het zonnetje.
-
-Wij ambiëren een ongedwongen en persoonlijke sfeer waar serieus werk kan worden gedaan.
-
+Hier kan je aan de slag in een prettige, huiselijke en persoonlijke omgeving waar serieus wordt gewerkt.

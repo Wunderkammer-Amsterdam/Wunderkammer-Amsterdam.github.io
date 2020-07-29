@@ -1,4 +1,4 @@
-<address><b>stichting Wonderkamer</b>
+<address><b>Stichting Wonderkamer</b>
 <br>Kanaalstraat 149A<br>
 1054 XD Amsterdam<br>
 Nederland<br>

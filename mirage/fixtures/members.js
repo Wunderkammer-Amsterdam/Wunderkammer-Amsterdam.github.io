@@ -11,13 +11,13 @@ export default shuffle([
     id: 1,
     title: 'Bas',
     slug: 'bas',
-    'tag-line': 'developer slash designer',
+    'tag-line': 'Developer slash Designer',
   },
   {
     id: 2,
     title: 'Tom',
     slug: 'tom',
-    'tag-line': 'Freelance Consultant, Quant Developer',
+    'tag-line': 'Fintech Developer',
   },
   {
     id: 3,

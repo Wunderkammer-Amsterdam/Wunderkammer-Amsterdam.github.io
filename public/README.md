@@ -1,7 +1,10 @@
-# stichting Wonderkamer Website
+# Stichting Wonderkamer Website
 
-Website for [Wonderkamer](https://wonderkamer.github.io).
+Website for the [Wonderkamer](https://wonderkamer.com).
 
-Deployment is done automaticly via github actions configured on this [Wonderkamer](https://github.com/wonderkamer/website) repository. (Meaning changes should be done on that repository).
+Changes should be done on repository https://github.com/wonderkamer/website
 
-Note that deployments to github.io only support static files. It does *not* support dynamic server functionality such as .htaccess. Therefore this deployment is only partially functional.
+Deployment is done automatically via github actions:
+- branch develop is deployed to https://dev.wonderkamer.com
+- branch master is deployed to www.wonderkamer.com
+

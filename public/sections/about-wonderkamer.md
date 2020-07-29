@@ -1,10 +1,13 @@
-### Over Wonderkamer
+### Stichting Wonderkamer
 
-De ruimte word beheerd door stichting Wonderkamer waarmee jij een *gebruikersovereenkomst* afsluit. De stichting huurt de 
-ruimte voor onbepaalde tijd, maar is telkens per jaar opzegbaar (per September). 
+De ruimte wordt beheerd door Stichting Wonderkamer, een stichting zonder winstoogmerk. 
+Vanuit de stichting bieden we een (mede-)gebruiksvereenkomst aan voor het gebruik van de werkplek en de ruimte.
 
-We werken met overeenkomsten voor onbepaalde tijd en met een opzegtermijn van 2 maanden en hanteren een *flexibele 
-proefperiode* van één maand waarbinnen je nog van gedachten kunt veranderen. Daarnaast zijn er als
-vanzelfsprekend enkele afspraken waar we elkaar aan houden. 
+De overeenkomst is voor onbepaalde tijd en heeft een opzegtermijn van twee maanden. We hanteren een initiële 
+proefperiode van één maand waarin je direkt op kunt zeggen. Je kunt een keer komen proefdraaien om te kijken of het wat voor je is. 
+Op die manier hoef je je niet gelijk vast te leggen.
 
-De stichting is ingeschreven bij de Kamer van Koophandel onder nummer xxx.xxx.xxx.
+Zoveel mensen, zoveel wensen. Daarom hebben we zowel vaste als flexibele werkplekken voor verschillende bezetting en budget.
+De flex contracten werken in dagdelen, als je gemiddeld twee dagdelen in de week wilt gaan werken kan je een FLEX1 kiezen, etc.
+
+

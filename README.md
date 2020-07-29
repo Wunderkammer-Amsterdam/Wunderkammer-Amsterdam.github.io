@@ -1,12 +1,10 @@
-# wonderkamer
+# Wonderkamer
 
-Source (and content) for website for Wonderkamer.
+Source and content for Wonderkamer website.
 
 ## Deployment
 
-After pushing/merging to the main branch github action will build and test a production version. The resulting build
-directory is automaticly deployed to;
+After pushing/merging to the main branch github action will build and test a production version.  
 
-- https://wonderkamer.github.io (which is a special repository that will make static site available under https://github.com/wonderkamer/wonderkamer.github.io)
-- https://wonderkamer.com (not done yet)
+The resulting build directory is automatically deployed to https://wonderkamer.com
 

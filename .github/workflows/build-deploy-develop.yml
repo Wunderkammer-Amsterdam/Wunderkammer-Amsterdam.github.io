@@ -44,33 +44,6 @@ jobs:
         name: build-dev
         path: dist/
 
-  deploy-to-githubio:
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    steps:
-
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        persist-credentials: false
-
-    - name: Retrieve distribution
-      uses: actions/download-artifact@v2
-      with:
-        name: build-dev
-        path: dist
-
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        REPOSITORY_NAME: wonderkamer/wonderkamer.github.io
-        BRANCH: master # The branch the action should deploy to.
-        FOLDER: dist # The folder the action should deploy.
-
-
   # see https://github.com/SamKirkland/FTP-Deploy-Action
   deploy-to-develop:
     runs-on: ubuntu-latest
