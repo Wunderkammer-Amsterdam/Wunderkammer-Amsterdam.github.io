@@ -65,7 +65,7 @@ export default shuffle([
     id: 10,
     title: 'Suzanne',
     slug: 'suzanne',
-    'tag-line': 'Sociaal ondernemer',
+    'tag-line': 'Sociaal Ondernemer',
   },
   {
     id: 11,
