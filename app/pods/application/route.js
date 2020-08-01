@@ -4,6 +4,13 @@ import { inject as service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
   @service router;
+  @service intl;
+
+  beforeModel() {
+    super.beforeModel(...arguments);
+
+    this.intl.setLocale(['nl-nl']);
+  }
 
   model() {
     return RSVP.hash({
