@@ -1,12 +1,15 @@
-# wonderkamer
+# Wonderkamer
 
-Source (and content) for website for Wonderkamer.
+Source and content for Wonderkamer website.
 
-## Deployment
+## Development
 
-After pushing/merging to the main branch github action will build and test a production version. The resulting build
-directory is automaticly deployed to;
+For local development see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-- https://wonderkamer.github.io (which is a special repository that will make static site available under https://github.com/wonderkamer/wonderkamer.github.io)
-- https://wonderkamer.com (not done yet)
+Push or merge into the **develop** branch and a github action will run to build and test and deploy the resulting build 
+directory to [dev.wonderkamer.com](https://dev.wonderkamer.com). It is password protected.
 
+## Publishing
+
+Push or merge into the **master** branch and a github action will run to build and test and deploy the resulting build 
+directory to [wonderkamer.com](https://wonderkamer.com).

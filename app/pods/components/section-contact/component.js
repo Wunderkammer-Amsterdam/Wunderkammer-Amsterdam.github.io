@@ -25,8 +25,6 @@ export default class SectionContactComponent extends Component {
         this.showAllValidations = true;
       } else {
         this.changeset.save().then((result) => {
-          console.log(result);
-
           if (result['success'] === true) {
             this.isSubmitted = true;
           }
@@ -38,14 +36,14 @@ export default class SectionContactComponent extends Component {
   @action
   onCaptchaResolved(token) {
     this.changeset.reCaptchaToken = token;
-    console.log(token, this.changeset.changes);
+
     this.changeset.validate();
   }
 
   @action
   onCaptchaExpired() {
     this.changeset.reCaptchaToken = null;
-    console.log(this.changeset.changes);
+
     this.changeset.validate();
     this.reCaptchaReference.resetReCaptcha();
   }

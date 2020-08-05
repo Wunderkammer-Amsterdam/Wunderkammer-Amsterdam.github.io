@@ -6,4 +6,8 @@ export default class MembersMemberRoute extends Route {
       return records.firstObject;
     });
   }
+
+  setupController(controler, model) {
+    this.controllerFor('application').setProperties({ member: model });
+  }
 }

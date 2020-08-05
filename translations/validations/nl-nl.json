@@ -1,0 +1,6 @@
+{
+  "validations": {
+    "present": "{description} moet ingevuld worden",
+    "tooLong": "{description} is te lang (maximaal {max} tekens)"
+  }
+}
