@@ -1,7 +1,14 @@
 import Route from '@ember/routing/route';
 import fetch from 'fetch';
+import { inject as service } from '@ember/service';
 
 export default class BezettingRoute extends Route {
+  @service headData;
+
+  beforeModel() {
+    this.headData.touchIcon = 'icon-occupancy';
+  }
+
   model() {
     return fetch('/occupancy.php')
       .then((response) => {
