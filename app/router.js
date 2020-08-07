@@ -17,5 +17,5 @@ Router.map(function () {
     this.route('contact');
   });
 
-  this.route('bezetting');
+  this.route('occupancy', { path: '/bezetting' });
 });
