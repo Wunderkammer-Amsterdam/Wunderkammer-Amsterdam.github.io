@@ -14,7 +14,7 @@ export default class BezettingRoute extends Route {
         }
       })
       .then((dataPoints) => {
-        return dataPoints.sortBy('on').pop()['occupancy'];
+        return dataPoints.sortBy('on').pop();
       });
   }
 }

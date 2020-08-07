@@ -1,5 +1,6 @@
 <section class="bg-primary d-flex align-items-center justify-content-center">
-  <span class="text-center" style="font-size: 45vw; line-height: 0;">
-    <label>{{this.model}}</label>
+  <span class="text-center">
+    <span style="font-size: 45vw; line-height: 0;">{{this.model.occupancy}}</span>
+    <span class="text-dark small">{{moment-from-now this.model.on}}</span>
   </span>
 </section>
