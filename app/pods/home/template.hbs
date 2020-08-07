@@ -1,0 +1,28 @@
+{{on-key 'ArrowUp' this.previousSection}}
+{{on-key 'ArrowDown' this.nextSection}}
+
+<Section class="bg-primary" @routeId="home">
+  <SectionTitle/>
+</Section>
+
+<Section class="bg-secondary py-5" @routeId="about">
+  <SectionAbout/>
+</Section>
+
+<Section @routeId="impressions">
+  <SectionImpressions class="bg-secondary" />
+</Section>
+
+<Section class="bg-secondary py-5" @routeId="members">
+  <SectionMembers @members={{this.members}} @member={{this.member}}/>
+</Section>
+
+<Section class="bg-secondary" @routeId="map">
+  <SectionMap/>
+</Section>
+
+<Section class="bg-secondary py-5" @routeId="contact">
+  <SectionContact/>
+</Section>
+
+{{outlet}}

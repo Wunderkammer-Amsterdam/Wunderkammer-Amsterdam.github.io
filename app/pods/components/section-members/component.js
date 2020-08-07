@@ -14,6 +14,6 @@ export default class SectionMembersComponent extends Component {
       return false;
     }
 
-    this.router.transitionTo('members.member', member);
+    this.router.transitionTo('home.members.member', member);
   }
 }

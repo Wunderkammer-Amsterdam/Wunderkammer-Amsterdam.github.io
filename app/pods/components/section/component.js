@@ -12,10 +12,10 @@ export default class SectionComponent extends Component {
       return;
     }
 
-    const route = this.args.routeId !== 'home' ? this.args.routeId : 'application';
+    const route = this.args.routeId !== 'home' ? this.args.routeId : 'index';
 
-    if (!this.router.currentRoute.name.startsWith(route)) {
-      this.router.transitionTo(route);
+    if (!this.router.currentRoute.name.startsWith(`home.${route}`)) {
+      this.router.transitionTo(`home.${route}`);
     }
   }
 
