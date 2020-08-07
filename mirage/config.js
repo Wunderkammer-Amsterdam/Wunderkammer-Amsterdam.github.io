@@ -30,5 +30,7 @@ export default function () {
   this.passthrough('/members/**');
   this.passthrough('/sections/**');
   this.passthrough('/contact-form.php');
-  //  this.passthrough('/occupancy.php');
+  if (ENV['environment'] !== 'production') {
+    this.passthrough('/occupancy.php');
+  }
 }
