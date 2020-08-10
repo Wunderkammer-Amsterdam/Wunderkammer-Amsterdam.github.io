@@ -1,7 +1,7 @@
 {{page-title "Bezetting"}}
 <section class="bg-primary d-flex align-items-center justify-content-center">
-  <span class="text-center">
-    <span style="font-size: 45vw; line-height: 0;">{{this.model.occupancy}}</span>
-    <span class="text-dark small">{{moment-from-now this.model.on}}</span>
-  </span>
+  <div class="d-flex flex-column">
+  <Occupancy::Singular @occupancies={{this.model}} class="mt-5"/>
+  <Occupancy::Averages @occupancies={{this.model}}/>
+  </div>
 </section>

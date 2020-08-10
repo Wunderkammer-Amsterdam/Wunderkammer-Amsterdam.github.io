@@ -15,7 +15,7 @@ module.exports = function (defaults) {
       exclude: ['favicon-*.png', 'members', 'assets'],
     },
     'ember-math-helpers': {
-      only: ['mod'],
+      only: ['mod', 'mult'],
     },
   });
 

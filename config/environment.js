@@ -44,6 +44,15 @@ module.exports = function (environment) {
     'style-src': "'self' 'unsafe-inline' *.googleapis.com",
   };
 
+  ENV['moment'] = {
+    // Options:
+    // 'all' - all years, all timezones
+    // 'subset' - 2012-2022, all timezones
+    // 'none' - no data, just timezone API
+    includeTimezone: 'all',
+    includeLocales: ['nl'],
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
