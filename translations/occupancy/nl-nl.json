@@ -1,0 +1,13 @@
+{
+  "occupancy": {
+    "days": {
+      "friday": "vrijdagen",
+      "monday": "maandagen",
+      "saturday": "zaterdagen",
+      "sunday": "sundays",
+      "thursday": "donderdagen",
+      "tuesday": "dinsdagen",
+      "wednesday": "woensdagen"
+    }
+  }
+}

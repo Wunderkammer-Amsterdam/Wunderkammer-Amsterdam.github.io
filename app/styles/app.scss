@@ -51,9 +51,10 @@ section {
 //  @include responsive-font-size($font-size-sm, true);
 //}
 //@media (max-width: 1200px) {
-  .text-responsive {
-    font-size: calc(0.975rem + .5vw) !important;
-  }
+.text-responsive {
+  font-size: calc(0.975rem + .5vw) !important;
+}
+
 //}
 .form-group {
   label {
@@ -99,5 +100,38 @@ input[type=number]:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
   box-shadow: inset 0 -1px 0 #ddd;
-  border:transparent;
+  border: transparent;
+}
+
+.occupancy {
+  &.singular {
+    .current {
+      font-size: min(65vw, 45vh);
+      line-height: 0;
+    }
+
+    .last-update {
+      font-size: $font-size-sm * .8;
+      color: map-get($theme-colors, 'dark');
+    }
+  }
+
+  &.averages {
+    .title, .label {
+      font-size: $font-size-sm * .8;
+      color: map-get($theme-colors, 'dark');
+    }
+
+    .graph {
+      height: 20vh;
+
+      .bar {
+        background-color: map-get($theme-colors, 'dark');
+        width: 18px;
+        line-height: 0;
+
+        margin-right: 3px;
+      }
+    }
+  }
 }

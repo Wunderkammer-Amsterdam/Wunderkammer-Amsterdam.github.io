@@ -1,8 +1,18 @@
-<div class="d-flex w-100 justify-content-between align-items-end" style="height:100px;" ...attributes>
-  {{#each this.listOfNormalizedAverages as |entry|}}
-    <div class="mr-1 ml-1" {{on "click" (action this.clicked entry.value)}} role="button">
-      <div class="bg-dark" style="width: 30px; min-height: 1px; line-height:0; height: {{mult 60 entry.average}}px"></div>
-      <span class="small">{{entry.label}}</span>
-    </div>
-  {{/each}}
+<div {{on "click" (fn this.clicked null)}} role="button" ...attributes>
+  <div class="graph d-flex w-100 justify-content-between align-items-end">
+    {{#each this.listOfNormalizedAverages as |entry|}}
+      <div class="mr-1" {{on "click" (fn this.clicked (if this.day null entry.value))}} role="button">
+        <div class="bar" {{did-insert this.didInsertBar entry.average}}></div>
+        <span class="label">{{entry.label}}</span>
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="title">
+    {{#if this.title}}
+      {{this.title}}
+    {{else}}
+      &nbsp;
+    {{/if}}
+  </div>
 </div>
