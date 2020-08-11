@@ -104,7 +104,7 @@ input[type=number]:focus,
 }
 
 .occupancy {
-  &.singular {
+  &.occupancy-singular {
     .current {
       font-size: min(65vw, 45vh);
       line-height: 0;
@@ -116,10 +116,19 @@ input[type=number]:focus,
     }
   }
 
-  &.averages {
+  &.occupancy-averages {
+    min-width: 200px;
+    .title {
+      margin-top: 1.5rem;
+    }
+
     .title, .label {
       font-size: $font-size-sm * .8;
       color: map-get($theme-colors, 'dark');
+    }
+
+    .label {
+      position: absolute;
     }
 
     .graph {
@@ -127,10 +136,16 @@ input[type=number]:focus,
 
       .bar {
         background-color: map-get($theme-colors, 'dark');
-        width: 18px;
         line-height: 0;
 
-        margin-right: 3px;
+        margin-right: 2px;
+      }
+
+      &.graph-days {
+        .bar {width: 32px;}
+      }
+      &.graph-hours {
+        .bar {width: 16px;}
       }
     }
   }

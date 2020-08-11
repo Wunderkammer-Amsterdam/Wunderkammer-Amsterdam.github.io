@@ -60,7 +60,7 @@ export default class OccupancyAveragesComponent extends Component {
       );
 
       return averageOccupancySplitByDay.map((entry) => {
-        const normalizedAverage = entry.average / maxAverage;
+        const normalizedAverage = maxAverage === 0 ? maxAverage : entry.average / maxAverage;
         return Object.assign(entry, { average: normalizedAverage, label: moment.localeData(moment.locale())._weekdaysMin[entry.value] });
       });
     }
@@ -75,7 +75,8 @@ export default class OccupancyAveragesComponent extends Component {
       );
 
       return averageOccupancySplitByHour.map((entry) => {
-        const normalizedAverage = entry.average / maxAverage;
+        const normalizedAverage = maxAverage === 0 ? maxAverage : entry.average / maxAverage;
+
         return Object.assign(entry, { average: normalizedAverage, label: entry.value });
       });
     }
@@ -83,7 +84,7 @@ export default class OccupancyAveragesComponent extends Component {
 
   @action
   clicked(value, event) {
-    if (isNone(value)) {
+    if (isNone(value) || !isNone(this.day)) {
       this.day = null;
       this.title = null;
     } else {
@@ -96,7 +97,7 @@ export default class OccupancyAveragesComponent extends Component {
 
   @action
   didInsertBar(element, [value]) {
-    const pixels = value * 20;
+    const pixels = value * 32;
 
     element.style.height = pixels <= 1 ? '1px' : pixels + 'px';
   }

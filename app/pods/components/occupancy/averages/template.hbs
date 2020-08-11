@@ -1,9 +1,9 @@
 <div {{on "click" (fn this.clicked null)}} role="button" ...attributes>
-  <div class="graph d-flex w-100 justify-content-between align-items-end">
+  <div class="graph graph-{{if this.day 'hours' 'days'}} d-flex w-100 justify-content-between align-items-end">
     {{#each this.listOfNormalizedAverages as |entry|}}
-      <div class="mr-1" {{on "click" (fn this.clicked (if this.day null entry.value))}} role="button">
+      <div class="position-relative" {{on "click" (fn this.clicked (if this.day null entry.value))}} role="button">
         <div class="bar" {{did-insert this.didInsertBar entry.average}}></div>
-        <span class="label">{{entry.label}}</span>
+        <div class="label">{{entry.label}}</div>
       </div>
     {{/each}}
   </div>
