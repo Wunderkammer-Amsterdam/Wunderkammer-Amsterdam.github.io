@@ -5,6 +5,7 @@ export default class MemberModel extends Model {
   @attr('string') title;
   @attr('string') slug;
   @attr('string') tagLine;
+  @attr('boolean', { defaultValue: true }) active;
 
   get profileImgLargeSrc() {
     return '/' + ['members', this.slug, ['profile-large', 'jpg'].join('.')].join('/');

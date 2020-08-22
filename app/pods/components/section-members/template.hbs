@@ -6,9 +6,9 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <BsAccordion @itemComponent="bs-accordion/item" @onChange={{action "onChange"}} @selected={{@member}} as |acc|>
-        {{#each @members as |member index|}}
-          <acc.item @titleComponent="bs-accordion/item/title" @bodyComponent="bs-accordion/item/body" @value={{member}} as |item|>
+      <BsAccordion @onChange={{action "onChange"}} @selected={{@member}} as |acc|>
+        {{#each this.activeMembers as |member index|}}
+          <acc.item @value={{member}} as |item|>
 
             <item.title class="py-4" data-slug={{member.slug}}>
               <div class="d-flex justify-content-between align-items-start {{if (mod index 2) "flex-row" "flex-row-reverse"}}">

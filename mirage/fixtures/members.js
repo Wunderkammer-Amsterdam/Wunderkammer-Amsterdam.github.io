@@ -41,30 +41,27 @@ export default shuffle([
     id: 6,
     title: 'Laura',
     slug: 'laura',
+    active: false,
     'tag-line': 'Docent',
-  },
-  {
-    id: 7,
-    title: 'Karim',
-    slug: 'karim',
-    'tag-line': 'Filosoof',
   },
   {
     id: 8,
     title: 'Michaël',
     slug: 'michael',
+    active: false,
     'tag-line': 'UX Designer',
   },
   {
     id: 9,
     title: 'Joanne',
     slug: 'joanne',
-    'tag-line': 'Journalist',
+    'tag-line': 'Freelance journalist',
   },
   {
     id: 10,
     title: 'Suzanne',
     slug: 'suzanne',
+    active: false,
     'tag-line': 'Sociaal Ondernemer',
   },
   {
@@ -77,6 +74,7 @@ export default shuffle([
     id: 12,
     title: 'Dorieke',
     slug: 'dorieke',
+    active: false,
     'tag-line': 'Jurist - Film & Privacy',
   },
   {

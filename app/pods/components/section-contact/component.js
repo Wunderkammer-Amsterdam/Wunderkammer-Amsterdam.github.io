@@ -7,7 +7,6 @@ import lookupValidator from 'ember-changeset-validations';
 
 export default class SectionContactComponent extends Component {
   @tracked changeset;
-  @tracked showAllValidations = false;
   @tracked isSubmitted = false;
 
   @tracked reCaptchaReference;
@@ -22,14 +21,13 @@ export default class SectionContactComponent extends Component {
   onSubmit() {
     this.changeset.validate().then(() => {
       if (this.changeset.isInvalid) {
-        this.showAllValidations = true;
-      } else {
-        this.changeset.save().then((result) => {
-          if (result['success'] === true) {
-            this.isSubmitted = true;
-          }
-        });
+        return;
       }
+      this.changeset.save().then((result) => {
+        if (result['success'] === true) {
+          this.isSubmitted = true;
+        }
+      });
     });
   }
 

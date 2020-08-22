@@ -118,6 +118,7 @@ input[type=number]:focus,
 
   &.occupancy-averages {
     min-width: 200px;
+
     .title {
       margin-top: 1.5rem;
     }
@@ -142,11 +143,44 @@ input[type=number]:focus,
       }
 
       &.graph-days {
-        .bar {width: 32px;}
+        .bar {
+          width: 32px;
+        }
       }
+
       &.graph-hours {
-        .bar {width: 16px;}
+        .bar {
+          width: 16px;
+        }
       }
+    }
+  }
+}
+
+.section-members .accordion {
+  .card {
+    border: none;
+    background-color: transparent;
+
+    .card-header {
+      padding: 0 !important;
+      background-color: transparent;
+      border: none;
+
+      button {
+        padding: 2.25rem 0;
+        width: 100%;
+
+        &.btn:focus, &.btn:active:focus, &.btn.active:focus, &.btn:hover {
+          outline: none;
+          box-shadow: none;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1rem 0;
     }
   }
 }

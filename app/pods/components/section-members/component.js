@@ -8,6 +8,10 @@ export default class SectionMembersComponent extends Component {
 
   @tracked member;
 
+  get activeMembers() {
+    return (this.args.members || []).filterBy('active', true);
+  }
+
   @action
   onChange(member) {
     if (member === null) {

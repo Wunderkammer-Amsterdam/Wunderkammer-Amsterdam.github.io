@@ -25,16 +25,13 @@ export default class TextDate extends BaseControl {
 
   @action
   onKeyDown(event) {
-    // const key = event.key || event.keyCode === 13 ? 'Enter' : null;
-
     if (event.keyCode === 13 && !event.ctrlKey) {
       event.preventDefault();
+
       document.execCommand('insertText', false, '\n');
     }
 
-    const element = event.target;
-
-    this.onChange(element.value);
+    this.onChange(event.target.value);
   }
 
   @action

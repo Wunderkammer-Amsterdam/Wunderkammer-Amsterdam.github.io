@@ -19,7 +19,7 @@
         <BsForm @model={{this.changeset}}
                 @submitOnEnter={{true}}
                 @onSubmit={{action this.onSubmit}}
-                @showAllValidations={{this.showAllValidations}} autocomplete="off" as |form|>
+                autocomplete="off" as |form|>
           <form.element @size="lg" @property="name" @label="Naam" as |element|>
             <element.control autocomplete="off" class="bg-transparent"/>
           </form.element>
