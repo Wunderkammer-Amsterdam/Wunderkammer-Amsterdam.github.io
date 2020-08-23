@@ -1,13 +1,27 @@
 <?php
 
+use Dotenv\Dotenv;
 use Laminas\Mail;
 use Laminas\Mail\Transport\Smtp as SmtpTransport;
 use Laminas\Mail\Transport\SmtpOptions;
+use ReCaptcha\ReCaptcha;
 
 require_once('vendor/autoload.php');
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+(function (): void {
+    try {
+        $env = Dotenv::createImmutable( __DIR__);
+        $env->load();
+
+    } catch (\RuntimeException $e) {
+        $responseJson = [];
+        $responseJson['error'] = 'Er kon helaas geen e-mail verzonden worden';
+        $responseJson['detail'] = $e->getMessage();
+
+        header('Content-Type: application/json');
+        exit(json_encode($responseJson));
+    }
+})();
 
 // Redirect to HTTPS by default (for AppEngine)
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
@@ -21,49 +35,31 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
     }
 }
 
-if (! $secret = getenv('GOOGLE_RECAPTCHA_SECRET')) {
-    exit('GOOGLE_RECAPTCHA_SECRET env is missing');
-}
-
-if (! $smtpPassword = $_ENV('SMTP_PASSWORD')) {
-    exit('SMTP_PASSWORD env is missing');
-}
-
-// @todo make this configurable
-$recipient = 'hallo@wonderkamer.com';
-
 $transport = new SmtpTransport();
 $transport->setOptions(new SmtpOptions([
     'host'              => 'mail.bushbaby.nl',
     'connection_class'  => 'login',
     'connection_config' => [
-        'username' => $recipient,
-        'password' => $smtpPassword,
+        'username' => $_ENV['CONTACT_FORM_RECIPIENT'],
+        'password' => $_ENV['SMTP_PASSWORD'],
     ],
 ]));
 
-
 $data = json_decode(file_get_contents('php://input'), true);
 
-$recaptcha = new \ReCaptcha\ReCaptcha($secret);
-$resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])
+$reCaptchaResponse = (new ReCaptcha($_ENV['GOOGLE_RECAPTCHA_SECRET']))
+    ->setExpectedHostname($_SERVER['SERVER_NAME'])
     ->verify($data['reCaptchaToken'], $_SERVER['REMOTE_ADDR']);
 
-$responseJson = [];
-
-header('Content-Type: application/json');
-
-if (! $resp->isSuccess()) {
-    foreach ($resp->getErrorCodes() as $code) {
+if (! $reCaptchaResponse->isSuccess()) {
+    foreach ($reCaptchaResponse->getErrorCodes() as $code) {
         $responseJson['error'] = 'Er kon helaas geen e-mail verzonden worden';
         $responseJson['detail'] = $code;
     }
 
     print json_encode($responseJson);
-
-    return;
+    exit();
 }
-
 
 $name = $data['name'] ?: 'none';
 $subject = $data['subject'] ?: 'none';
@@ -82,15 +78,14 @@ Onderwerp : $subject
 Bericht : 
 
 $message
-
 EOT;
 
     $mailToUs->setBody($body);
-    $mailToUs->setFrom($recipient);
+    $mailToUs->setFrom($_ENV['CONTACT_FORM_RECIPIENT']);
     if (filter_var($data['via'], FILTER_VALIDATE_EMAIL)) {
         $mailToUs->setReplyTo($data['via']);
     }
-    $mailToUs->addTo($recipient, 'Wonderkamer');
+    $mailToUs->addTo($_ENV['CONTACT_FORM_RECIPIENT'], 'Wonderkamer');
     $mailToUs->setSubject('[wonderkamer.com] contact verzoek');
 
     $transport->send($mailToUs);
@@ -107,7 +102,7 @@ Wonderkamer
 EOT;
 
         $mailToInquirer->setBody($body);
-        $mailToInquirer->setFrom($recipient, 'Wonderkamer');
+        $mailToInquirer->setFrom($_ENV['CONTACT_FORM_RECIPIENT'], 'Wonderkamer');
         $mailToInquirer->addTo($data['via'], $data['name']);
         $mailToInquirer->setSubject('[wonderkamer.com] contact verzoek');
 
