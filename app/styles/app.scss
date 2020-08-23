@@ -105,18 +105,32 @@ input[type=number]:focus,
 
 .occupancy {
   &.occupancy-singular {
+    position: absolute;
+    top: 20vh;
+    vertical-align: text-bottom;
+
     .current {
+      vertical-align: text-bottom;
+      text-align: center;
       font-size: min(65vw, 45vh);
-      line-height: 0;
+      line-height: calc(min(65vw, 45vh));
     }
 
     .last-update {
+      display: block;
+      white-space: nowrap;
+      vertical-align: text-bottom;
+      width: 200px; height: 1rem;
+      text-align: right;
       font-size: $font-size-sm * .8;
-      color: map-get($theme-colors, 'dark');
+      color: map-get($grays, '700');
+      line-height: 0;
     }
   }
 
   &.occupancy-averages {
+    position: absolute;
+    bottom: 3vh;
     min-width: 200px;
 
     .title {
@@ -125,7 +139,7 @@ input[type=number]:focus,
 
     .title, .label {
       font-size: $font-size-sm * .8;
-      color: map-get($theme-colors, 'dark');
+      color: map-get($grays, '700');
     }
 
     .label {

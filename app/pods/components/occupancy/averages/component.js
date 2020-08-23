@@ -49,6 +49,10 @@ export default class OccupancyAveragesComponent extends Component {
     });
   }
 
+  get mode() {
+    return isNone(this.day) ? 'days' : 'hours';
+  }
+
   get listOfNormalizedAverages() {
     if (isNone(this.day)) {
       const averageOccupancySplitByDay = this.averageOccupancySplitByDay;
@@ -80,6 +84,8 @@ export default class OccupancyAveragesComponent extends Component {
         return Object.assign(entry, { average: normalizedAverage, label: entry.value });
       });
     }
+
+    return [];
   }
 
   @action
