@@ -18,7 +18,7 @@
       {{#unless this.isSubmitted}}
         <BsForm @model={{this.changeset}}
                 @submitOnEnter={{true}}
-                @onSubmit={{action this.onSubmit}}
+                @onSubmit={{fn this.onSubmit}}
                 autocomplete="off" as |form|>
           <form.element @size="lg" @property="name" @label="Naam" as |element|>
             <element.control autocomplete="off" class="bg-transparent"/>
@@ -39,8 +39,8 @@
               display: table;
             }
           </style>
-          <form.element @property="reCaptchaToken" as |element|>
-            <GRecaptcha @onSuccess={{action "onCaptchaResolved"}} @onExpired={{action "onCaptchaExpired"}} @ref={{mut this.reCaptchaReference}} />
+          <form.element @property="reCaptchaToken">
+            <GRecaptcha @onSuccess={{fn this.onCaptchaResolved}} @onExpired={{fn this.onCaptchaExpired}} @ref={{mut this.reCaptchaReference}} />
           </form.element>
 
           <BsButton @type="primary" @block={{true}} @buttonType="submit">verzend</BsButton>

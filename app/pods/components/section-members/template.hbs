@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <BsAccordion @onChange={{action "onChange"}} @selected={{@member}} as |acc|>
+      <BsAccordion @onChange={{fn this.onChange}} @selected={{@member}} as |acc|>
         {{#each this.activeMembers as |member index|}}
           <acc.item @value={{member}} as |item|>
 

@@ -1,4 +1,4 @@
-'use strict';
+// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
   parser: 'babel-eslint',
@@ -15,13 +15,16 @@ module.exports = {
     browser: true,
   },
   rules: {
-    'ember/no-jquery': 'error',
-    'generator-star-spacing': ['error', { before: false, after: false }],
+    // add your custom rules and overrides for node files here
     'no-unused-vars': ['error', { args: 'none' }],
     'prettier/prettier': ['error', { singleQuote: true, printWidth: 160 }],
     'ember/classic-decorator-hooks': 'error',
     'ember/classic-decorator-no-classic-methods': 'error',
     'ember-es6-class/no-object-extend': 0,
+
+    // this can be removed once the following is fixed
+    // https://github.com/mysticatea/eslint-plugin-node/issues/77
+    'node/no-unpublished-require': 'off',
   },
   overrides: [
     // node files
@@ -36,21 +39,9 @@ module.exports = {
         'lib/*/index.js',
         'server/**/*.js',
       ],
-      parserOptions: {
-        sourceType: 'script',
-      },
       env: {
-        browser: false,
         node: true,
       },
-      plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-
-        // this can be removed once the following is fixed
-        // https://github.com/mysticatea/eslint-plugin-node/issues/77
-        'node/no-unpublished-require': 'off',
-      }),
     },
   ],
 };
