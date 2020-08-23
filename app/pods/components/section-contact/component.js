@@ -23,8 +23,8 @@ export default class SectionContactComponent extends Component {
       if (this.changeset.isInvalid) {
         return;
       }
-      this.changeset.save().then((result) => {
-        if (result['success'] === true) {
+      this.changeset.save().then((response) => {
+        if (response['success'] === true) {
           this.isSubmitted = true;
         }
       });

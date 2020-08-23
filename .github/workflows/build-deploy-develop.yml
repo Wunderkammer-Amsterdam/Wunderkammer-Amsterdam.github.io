@@ -29,7 +29,10 @@ jobs:
     - name: Install dotenv file
       run: |
         echo "GOOGLE_RECAPTCHA_SECRET=\"${{ secrets.GOOGLE_RECAPTCHA_SECRET }}\"" > dist/.env
+        echo "SMTP_PASSWORD=\"${{ secrets.SMTP_PASSWORD }}\"" >> dist/.env
         echo "CONTACT_FORM_RECIPIENT=\"hallo@wonderkamer.com\"" >> dist/.env
+
+
 
     - name: Install PHP dependencies (into /dist/vendor)
       uses: nick-zh/composer-php@php7.4
