@@ -83,4 +83,10 @@ export default shuffle([
     slug: 'maaike',
     'tag-line': 'Ontwerper',
   },
+  {
+    id: 14,
+    title: 'Kaoutar',
+    slug: 'kaoutar',
+    'tag-line': 'Verbinder',
+  },
 ]);
