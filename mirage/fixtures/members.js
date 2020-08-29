@@ -81,7 +81,7 @@ export default shuffle([
     id: 13,
     title: 'Maaike',
     slug: 'maaike',
-    'tag-line': 'Ontwerper',
+    'tag-line': 'Docent NT2',
   },
   {
     id: 14,
