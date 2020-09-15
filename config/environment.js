@@ -38,9 +38,10 @@ module.exports = function (environment) {
 
   ENV['contentSecurityPolicy'] = {
     'default-src': "'none'",
-    'script-src': "'self' 'unsafe-eval' *.googleapis.com",
+    'script-src': "'self' 'unsafe-eval' *.googleapis.com www.google-analytics.com",
     'font-src': "'self' fonts.gstatic.com",
     'img-src': "'self' data: *.googleapis.com maps.gstatic.com *.gstatic.com",
+    'connect-src': "'self' www.google-analytics.com",
     'style-src': "'self' 'unsafe-inline' *.googleapis.com",
   };
 
@@ -52,6 +53,30 @@ module.exports = function (environment) {
     includeTimezone: 'all',
     includeLocales: ['nl'],
   };
+
+  const googleTrackingIdsPerEnvironment = {
+    development: 'UA-178010455-2',
+    testing: 'UA-178010455-2',
+    production: 'UA-178010455-1',
+  };
+
+  ENV['metricsAdapters'] = [
+    {
+      name: 'GoogleAnalytics',
+      environments: ['development', 'testing', 'production'],
+      config: {
+        id: googleTrackingIdsPerEnvironment[environment] || googleTrackingIdsPerEnvironment['testing'],
+        // Use `analytics_debug.js` in development
+        debug: false, //environment === 'development',
+        // Use verbose tracing of GA events
+        trace: false, //environment === 'development',
+        // Ensure development env hits aren't sent to GA
+        sendHitTask: environment !== 'development',
+        // Specify Google Analytics plugins
+        require: [], //['ecommerce']
+      },
+    },
+  ];
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

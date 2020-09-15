@@ -85,6 +85,7 @@
     "ember-concurrency": "^1.2.1",
     "ember-leaflet-google-mutant-layer": "^0.0.15",
     "ember-math-helpers": "^2.15.0",
+    "ember-metrics": "^0.16.0",
     "ember-style-modifier": "^0.6.0",
     "ember-truth-helpers": "^2.1.0",
     "prettier": "^2.0.5"
