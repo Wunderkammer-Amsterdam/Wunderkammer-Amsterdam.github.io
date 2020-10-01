@@ -4,4 +4,4 @@
 Nederland<br>
 </address>
 
-We hebben momenteel plaats... Wil je een keertje de sfeer proeven? Wees welkom.
+Je kunt altijd een keertje de sfeer komen proeven... Wees welkom.
