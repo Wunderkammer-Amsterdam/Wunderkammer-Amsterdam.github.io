@@ -117,6 +117,6 @@ export default shuffle([
     title: 'Piero',
     slug: 'piero',
     active: true,
-    'tag-line': '',
+    'tag-line': 'Information designer',
   },
 ]);
