@@ -138,4 +138,8 @@ export default function () {
   if (ENV['environment'] === 'production') {
     this.passthrough('/occupancy.php');
   }
+
+  if (ENV['environment'] === 'testing') {
+    this.passthrough('/occupancy.php');
+  }
 }
