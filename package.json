@@ -1,6 +1,6 @@
 {
   "name": "wonderkamer",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "description": "website voor Stichting Wonderkamer",
   "repository": "",
@@ -26,9 +26,7 @@
     "release:major": "standard-version --tag-prefix=\"\" --commit-all --release-as major"
   },
   "standard-version": {
-    "scripts": {
-      "postbump": "yarn version --new-version=$(node -p \"require('./package').version\") --no-git-tag-version --no-commit-hooks --cwd=packages/lab-plhw && git add packages/lab-plhw/package.json"
-    }
+    "scripts": {}
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
