@@ -119,4 +119,11 @@ export default shuffle([
     active: true,
     'tag-line': 'Information designer',
   },
+  {
+    id: 18,
+    title: 'Bas',
+    slug: 'bas2',
+    active: true,
+    'tag-line': 'Onderzoeker lucht kwaliteit',
+  },
 ]);
