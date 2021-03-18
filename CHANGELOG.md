@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/Wonderkamer/website/compare/1.2.0...1.2.1) (2021-03-18)
+
+
+### Content Changes
+
+* rename leden a beetje ([d4bf5d4](https://github.com/Wonderkamer/website/commits/d4bf5d470f7caa890793e59d9673be2674d09e68))
+
 ## 1.2.0 (2021-03-18)
 
 
