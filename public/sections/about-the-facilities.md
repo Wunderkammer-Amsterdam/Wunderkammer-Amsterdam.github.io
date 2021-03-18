@@ -2,7 +2,7 @@
 
 Je hebt op de locatie beschikking over
 
-- snel en stabiel internet tot 600 Mbit/s
+- snel, stabiel, draadloos en bekabeld internet tot 600 Mbit/s
 - een z/w laserprinter en andere kantoorbenodigdheden
 - twee stille bel- en/of overleg ruimtes
 - kastruimte voor je spullen
