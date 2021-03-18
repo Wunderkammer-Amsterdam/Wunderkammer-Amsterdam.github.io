@@ -30,6 +30,10 @@ module.exports = {
     // node files
     {
       files: [
+        '.prettierrc.js',
+        '.commitlintrc.js',
+        '.template-lintrc.js',
+        'lint-staged.config.js',
         '.eslintrc.js',
         '.template-lintrc.js',
         'ember-cli-build.js',
