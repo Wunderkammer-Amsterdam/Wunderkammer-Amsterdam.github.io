@@ -7,15 +7,28 @@ export default class ApplicationRoute extends Route {
   @service moment;
   @service intl;
 
+  queryParams = {
+    source: {
+      refreshModel: true,
+    },
+  };
+
   constructor() {
     super(...arguments);
 
     this.router.on('routeDidChange', () => {
-      const page = this.router.currentURL;
+      const page = this.router.currentURL.split('?').shift();
       const title = this.router.currentRouteName || 'unknown';
 
       this.metrics.trackPage({ page, title });
     });
+  }
+
+  model(params) {
+    if (params.source) {
+      this.metrics.trackEvent('source', params.source);
+      this.transitionTo('home', { queryParams: { source: null } });
+    }
   }
 
   beforeModel() {

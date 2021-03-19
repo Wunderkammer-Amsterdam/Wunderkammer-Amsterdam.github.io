@@ -10,7 +10,7 @@ export default shuffle([
   {
     id: 1,
     title: 'Bas',
-    slug: 'bas',
+    slug: 'bas-kamer',
     active: true,
     'tag-line': 'Developer slash Designer',
   },
@@ -118,5 +118,12 @@ export default shuffle([
     slug: 'piero',
     active: true,
     'tag-line': 'Information designer',
+  },
+  {
+    id: 18,
+    title: 'Bas',
+    slug: 'bas-mijling',
+    active: true,
+    'tag-line': 'Onderzoeker luchtkwaliteit',
   },
 ]);
