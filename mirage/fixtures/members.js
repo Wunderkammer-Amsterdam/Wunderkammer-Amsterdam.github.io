@@ -60,7 +60,7 @@ export default shuffle([
     id: 9,
     title: 'Joanne',
     slug: 'joanne',
-    active: true,
+    active: false,
     'tag-line': 'Freelance journalist',
   },
   {
@@ -125,5 +125,19 @@ export default shuffle([
     slug: 'bas-mijling',
     active: true,
     'tag-line': 'Onderzoeker luchtkwaliteit',
+  },
+  {
+    id: 19,
+    title: 'Maria',
+    slug: 'maria',
+    active: true,
+    'tag-line': '...',
+  },
+  {
+    id: 20,
+    title: 'Trudy',
+    slug: 'trudy',
+    active: true,
+    'tag-line': '...',
   },
 ]);
