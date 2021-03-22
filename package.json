@@ -1,6 +1,6 @@
 {
   "name": "wonderkamer",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "description": "website voor Stichting Wonderkamer",
   "repository": "",
@@ -73,7 +73,7 @@
     "circular": "^1.0.5",
     "ember-bootstrap-changeset-validations": "^4.0.0",
     "ember-bootstrap": "^4.6.3",
-    "ember-changeset-validations": "^3.14.2", 
+    "ember-changeset-validations": "^3.14.2",
     "ember-changeset": "3.13.2",
     "ember-cli-head": "^1.0.0",
     "ember-cli-mirage": "^1.1.8",

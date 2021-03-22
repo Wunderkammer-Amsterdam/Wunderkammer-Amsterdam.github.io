@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/Wonderkamer/website/compare/1.2.1...1.2.2) (2021-03-22)
+
+
+### Content Changes
+
+* member changes ([54cde89](https://github.com/Wonderkamer/website/commits/54cde8902608b5fd6b70829b1eeaf4dea557b0ab))
+* tekst wijziging ([2d4c020](https://github.com/Wonderkamer/website/commits/2d4c0204ef583543bb9d74a4b85ff6ac8a1a2a0f))
+* tekst wijziging ([c2163dc](https://github.com/Wonderkamer/website/commits/c2163dca68cad7166a94f38fa2d6818458f352dd))
+
+
+### Miscellaneous
+
+* maps update ([a3c03bf](https://github.com/Wonderkamer/website/commits/a3c03bf714901f8dbbcb686d7287f9429cbccbb6))
+* replace non working library ([3d4215c](https://github.com/Wonderkamer/website/commits/3d4215c44a2405311ca10e1e54c39ca3f2dbc4e7))
+* updated packages ([359cfe5](https://github.com/Wonderkamer/website/commits/359cfe5a4db5004f3f7f2be63058e84d5618fce3))
+
 ### [1.2.1](https://github.com/Wonderkamer/website/compare/1.2.0...1.2.1) (2021-03-18)
 
 
