@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/Wonderkamer/website/compare/1.2.2...1.2.3) (2021-04-19)
+
+
+### Content Changes
+
+* lid verwijderen en kopij (internetsnelheid) aanpassen ([32cd2cc](https://github.com/Wonderkamer/website/commits/32cd2cc66f9b0f793a51e9e79c45ac9cb7331992))
+
 ### [1.2.2](https://github.com/Wonderkamer/website/compare/1.2.1...1.2.2) (2021-03-22)
 
 
