@@ -137,7 +137,7 @@ export default shuffle([
     id: 20,
     title: 'Trudy',
     slug: 'trudy',
-    active: true,
+    active: false,
     'tag-line': '...',
   },
 ]);
