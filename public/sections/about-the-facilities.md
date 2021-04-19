@@ -1,11 +1,12 @@
 ### Over de faciliteiten
 
-Je hebt op de locatie beschikking over
+Je hebt beschikking over
 
-- snel, stabiel, draadloos en bekabeld internet tot 600 Mbit/s
+- stabiel internet, zowel draadloos als bekabeld (tot 700 Mbit/s)
 - een z/w laserprinter en andere kantoorbenodigdheden
-- twee stille bel- en/of overleg ruimtes
+- twee stille bel- en/of overlegruimtes
 - kastruimte voor je spullen
+- locker voor je spullen
 - onbeperkte koffie en thee
 - een keuken met koelkast en vaatwasser, tosti-maker en oven
 - een lunchtafel ook al komt de gezamelijke lunch er nooit van
