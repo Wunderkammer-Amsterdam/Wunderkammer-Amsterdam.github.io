@@ -5,4 +5,4 @@ Op de begane grond hebben we twee heringerichte schoollokalen en een tuin in geb
 De overige verdiepingen zijn in gebruik als ateliers.
 De hoge ruimte krijgt met de grote ramen veel licht en heeft een huiselijke sfeer.
 
-Hier kan je aan de slag in een prettige, huiselijke en persoonlijke omgeving waar serieus wordt gewerkt.
+Hier kan je aan de slag in een prettige, aangename en persoonlijke omgeving waar serieus wordt gewerkt.

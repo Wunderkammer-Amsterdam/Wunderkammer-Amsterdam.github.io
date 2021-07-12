@@ -9,7 +9,7 @@ Je hebt beschikking over
 - locker voor je spullen
 - onbeperkte koffie en thee
 - een keuken met koelkast en vaatwasser, tosti-maker en oven
-- een lunchtafel ook al komt de gezamelijke lunch er nooit van
+- een lunchtafel (ook al komt de gezamelijke lunch er nooit van)
 - een heerlijke tuin met picknicktafel
 
-In de buurt vindt je leuke lunch- en koffietentjes, cafes en terrasjes, diverse supermarkten en het Vondelpark.
+In de buurt vind je diverse lunch- en koffietentjes, cafes en terrasjes, diverse supermarkten en het Vondelpark.
