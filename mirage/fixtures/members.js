@@ -147,6 +147,6 @@ export default shuffle([
     title: 'Selm',
     slug: 'selm-wenselaar',
     active: true,
-    'tag-line': '...',
+    'tag-line': 'Dramaturg, Schrijver, Curator',
   },
 ]);
