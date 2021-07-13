@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/Wonderkamer/website/compare/1.2.3...1.2.4) (2021-07-13)
+
+
+### Content Changes
+
+* leden toevoegen, bio's etc ([e2749e5](https://github.com/Wonderkamer/website/commits/e2749e5fd7667e366ee1d4e58cf9e149e608d9c3))
+* leden toevoegen, bio's etc ([267365c](https://github.com/Wonderkamer/website/commits/267365ca9dddae5215f0b75b7fcfcb7793a136bd))
+* tekstuele en photo update ([88f0537](https://github.com/Wonderkamer/website/commits/88f053784b3a9c4ddd1fccbe214326524a1e6fc7))
+
+
+### Refactoring
+
+* route reload ([750019f](https://github.com/Wonderkamer/website/commits/750019fd53184329dd1f22a4a499e483671389e3))
+
 ### [1.2.3](https://github.com/Wonderkamer/website/compare/1.2.2...1.2.3) (2021-04-19)
 
 
