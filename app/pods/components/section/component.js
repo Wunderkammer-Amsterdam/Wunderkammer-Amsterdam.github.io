@@ -1,9 +1,10 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
-import { action } from '@ember/object';
+import { action, computed } from '@ember/object';
 
 export default class SectionComponent extends Component {
   @service inViewport;
+  @service homeNav;
   @service router;
 
   @action
@@ -12,22 +13,19 @@ export default class SectionComponent extends Component {
       return;
     }
 
-    const route = this.args.routeId !== 'home' ? this.args.routeId : 'index';
-
-    if (!this.router.currentRoute.name.startsWith(`home.${route}`)) {
-      this.router.transitionTo(`home.${route}`);
-    }
+    this.homeNav.sectionWentIntoView(this._route);
   }
 
   @action
-  sectionInserted(element) {
-    const name = this.router.currentRouteName.split('.').shift();
-
-    if (this.args.routeId === name) {
-      window.scrollTo({ top: element.offsetTop });
-    }
+  onViewOut(element) {
+    this.homeNav.sectionWentOutOfView(this._route);
   }
 
+  get _route() {
+    return this.args.routeId !== 'home' ? this.args.routeId : 'index';
+  }
+
+  @computed('classIdentifier', 'isActive')
   get classes() {
     const classes = [];
 
@@ -44,7 +42,8 @@ export default class SectionComponent extends Component {
     return `section-${this.args.routeId}`;
   }
 
+  @computed('args.routeId', 'homeNav.activeRoute')
   get isActive() {
-    return this.router.currentRoute.name.startsWith(this.args.routeId);
+    return this.homeNav.activeRoute === `home.${this.args.routeId}`;
   }
 }
